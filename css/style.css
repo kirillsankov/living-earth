@@ -63,6 +63,10 @@ body.lock {
   line-height: 19px;
 }
 
+.text-gold {
+  color: #B0A33D;
+}
+
 .subtitle {
   line-height: 19.38px;
   color: #B0A33D;
@@ -90,6 +94,9 @@ body.lock {
 
 .main {
   flex-grow: 1;
+  background-color: #191919;
+  background-image: linear-gradient(180deg, #292929 0%, #282828 16.58%, #272727 33.27%, #222222 53.66%, #1F1F1F 62.93%, #191919 74.06%);
+  background-repeat: no-repeat;
 }
 
 .logo {
@@ -243,9 +250,6 @@ body.lock {
 
 /*=============================================*/
 .info {
-  background-color: #191919;
-  background-image: linear-gradient(180deg, #292929 0%, #282828 16.58%, #272727 33.27%, #222222 53.66%, #1F1F1F 62.93%, #191919 74.06%);
-  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
 }
@@ -368,8 +372,8 @@ body.lock {
   justify-content: space-evenly;
   flex-wrap: wrap;
   column-gap: 52px;
-  row-gap: 19px;
-  padding: 0 0 49px 0;
+  row-gap: 25px;
+  padding: 0 0 40.4px 0;
 }
 .founders__title {
   text-align: center;
@@ -377,7 +381,7 @@ body.lock {
   margin: -7px 0 47px 0;
 }
 .founders__subtitle {
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 .founders__item {
   width: 320px;
@@ -406,7 +410,7 @@ body.lock {
   left: 50%;
   transform: translate(-50%, 80%) rotate(90deg);
   filter: drop-shadow(7px 7px 10px #000000);
-  background: transparent url("../img/info/founders/pentagon.png");
+  background: transparent url("../img/pentagon-gold.png");
   background-size: cover;
 }
 .founders__img_koshelev {
@@ -417,10 +421,42 @@ body.lock {
 }
 .founders__text {
   text-align: center;
+  white-space: pre-wrap;
 }
 .founders__text_koshalev {
   font-size: 13px;
   line-height: 18.3px;
+}
+
+/*=============================================*/
+.img-bottles {
+  width: 405px;
+  height: 358px;
+  position: relative;
+  background-image: url("../img/pentagon-gold.png");
+}
+
+.products {
+  background-image: url("../img/products/petagon-background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+.products__title {
+  font-size: 24px;
+}
+.products__description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products__description-text {
+  max-width: 514px;
+  white-space: pre-wrap;
+}
+.products__description-gold {
+  max-width: 343px;
 }
 
 /*=============================================*/
@@ -678,7 +714,8 @@ body.lock {
   }
   .founders__items {
     column-gap: 5px;
-    row-gap: 30px;
+    row-gap: 27px;
+    padding: 0 0 39px 0;
   }
 
   .info::before, .info::after {
