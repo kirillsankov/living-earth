@@ -59,7 +59,11 @@ body.lock {
 }
 
 .text {
-  width: 100%;
+  line-height: 19px;
+}
+
+.text-gold {
+  color: #B0A33D;
   line-height: 19px;
 }
 
@@ -90,6 +94,9 @@ body.lock {
 
 .main {
   flex-grow: 1;
+  background-color: #191919;
+  background-image: linear-gradient(180deg, #292929 0%, #282828 16.58%, #272727 33.27%, #222222 53.66%, #1F1F1F 62.93%, #191919 74.06%);
+  background-repeat: no-repeat;
 }
 
 .logo {
@@ -243,9 +250,6 @@ body.lock {
 
 /*=============================================*/
 .info {
-  background-color: #191919;
-  background-image: linear-gradient(180deg, #292929 0%, #282828 16.58%, #272727 33.27%, #222222 53.66%, #1F1F1F 62.93%, #191919 74.06%);
-  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
 }
@@ -368,8 +372,8 @@ body.lock {
   justify-content: space-evenly;
   flex-wrap: wrap;
   column-gap: 52px;
-  row-gap: 19px;
-  padding: 0 0 49px 0;
+  row-gap: 25px;
+  padding: 0 0 41.4px 0;
 }
 .founders__title {
   text-align: center;
@@ -377,7 +381,7 @@ body.lock {
   margin: -7px 0 47px 0;
 }
 .founders__subtitle {
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 .founders__item {
   width: 320px;
@@ -406,7 +410,7 @@ body.lock {
   left: 50%;
   transform: translate(-50%, 80%) rotate(90deg);
   filter: drop-shadow(7px 7px 10px #000000);
-  background: transparent url("../img/info/founders/pentagon.png");
+  background: transparent url("../img/pentagon-gold.png");
   background-size: cover;
 }
 .founders__img_koshelev {
@@ -417,10 +421,215 @@ body.lock {
 }
 .founders__text {
   text-align: center;
+  white-space: pre-wrap;
 }
 .founders__text_koshalev {
   font-size: 13px;
   line-height: 18.3px;
+}
+
+/*=============================================*/
+.products {
+  background-image: url("../img/products/petagon-background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+.products__title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 57px;
+  margin-bottom: 38px;
+}
+.products__img-text {
+  font-size: 12px;
+}
+.products__subtitle {
+  display: inline-block;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 85.6%;
+  background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+}
+.products__rectangle {
+  width: 55.4%;
+  margin-left: auto;
+}
+
+.img-bottles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-bottles__bottles {
+  width: 423px;
+  height: 358px;
+  position: relative;
+  background-image: url(../img/pentagon-gold.png);
+  background-size: 100%;
+  margin-bottom: 12px;
+  background-repeat: no-repeat;
+}
+.img-bottles__description {
+  transform: translateX(-7px);
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  align-items: center;
+  padding: 0 83px 69px 83px;
+}
+.description__common-words {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 129px 0 0 0;
+  row-gap: 12px;
+}
+.description__text {
+  max-width: 514px;
+  white-space: pre-wrap;
+  font-size: 0;
+}
+.description__text .text {
+  font-size: 14px;
+}
+.description__text-gold {
+  max-width: 332px;
+}
+.description__img-pink {
+  position: absolute;
+  width: 48%;
+  bottom: 19px;
+  left: -19px;
+  transform: rotate(-8deg);
+}
+.description__img-orange {
+  position: absolute;
+  width: 49%;
+  bottom: 32px;
+  right: -6px;
+  transform: rotate(-19deg);
+}
+.description__img-black {
+  position: absolute;
+  width: 46%;
+  bottom: 19px;
+  left: 64px;
+  transform: rotate(11deg);
+}
+.description__img-tea {
+  position: absolute;
+  width: 42%;
+  bottom: 17px;
+  left: 176px;
+  transform: rotate(7deg);
+}
+
+.honey__subtitle {
+  margin: 0 0 10px 0;
+  transform: translateX(-6px);
+}
+.honey__top-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 30px 14px;
+}
+.honey__img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -34px 0 0 0;
+}
+.honey__img {
+  position: absolute;
+  width: 55.5%;
+  left: 89px;
+  transform: rotate(-3deg);
+  bottom: -33px;
+}
+.honey__text-container {
+  max-width: 671px;
+  margin: 43px 0 0 0;
+  line-height: 19.38px;
+}
+.honey__text-gold {
+  margin: 0 0 30px 0;
+}
+.honey__text-item {
+  margin: 0 0 23px 0;
+}
+.honey__button {
+  width: 158px;
+  margin: 22px 0 0 0;
+  transform: translateX(-10px);
+}
+.honey__bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+.honey__advantages {
+  flex-basis: 37.5%;
+}
+.honey__specifications {
+  flex-basis: 50%;
+}
+.honey__advantages-title {
+  text-align: center;
+  margin: 0 0 36px 0;
+}
+.honey__specifications-title {
+  text-align: center;
+}
+
+.block {
+  text-align: center;
+}
+.block__body {
+  align-items: center;
+  width: 100%;
+}
+.block__text-top {
+  margin: 0 0 10px 0;
+}
+.block__item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  max-width: 261px;
+  padding-top: 80px;
+}
+.block__item::before, .block__item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+}
+.block__item::before {
+  width: 78px;
+  height: 63px;
+  top: 0;
+  background-image: url("../img/products/pentagon-black.png");
+}
+.block__item::after {
+  width: 45px;
+  height: 46px;
+  top: 8px;
+  background-image: url("../img/logo.svg");
+  background-size: cover;
+}
+.block__button {
+  text-decoration-line: underline;
+  color: #B0A33D;
+  cursor: pointer;
 }
 
 /*=============================================*/
@@ -678,7 +887,8 @@ body.lock {
   }
   .founders__items {
     column-gap: 5px;
-    row-gap: 30px;
+    row-gap: 27px;
+    padding: 0 0 39px 0;
   }
 
   .info::before, .info::after {
