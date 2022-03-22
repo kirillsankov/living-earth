@@ -61,11 +61,11 @@ body.lock{
   -webkit-text-fill-color: transparent;
 }
 .text{
-  width: 100%;
   line-height: 19px;
 }
 .text-gold{
   color: #B0A33D;
+  line-height: 19px;
 }
 .subtitle{
   line-height: 19.38px;
@@ -373,8 +373,7 @@ body.lock{
     flex-wrap: wrap;
     column-gap: 52px;
     row-gap: 25px;
-    padding: 0 0 40.4px 0;
-
+    padding: 0 0 41.4px 0;
   }
   &__title{
     text-align: center;
@@ -431,12 +430,7 @@ body.lock{
 }
 
 /*=============================================*/
-.img-bottles{
-  width: 405px;
-  height: 358px;
-  position: relative;
-  background-image: url("../img/pentagon-gold.png");
-}
+
 .products{
   background-image: url("../img/products/petagon-background.png");
   background-repeat: no-repeat;
@@ -444,19 +438,201 @@ body.lock{
   background-position: top;
   &__title{
     font-size: 24px;
+    text-align: center;
+    padding-top: 57px;
+    margin-bottom: 38px;
+  }
+  &__img-text{
+    font-size: 12px;
+  }
+  &__subtitle{
+    display: inline-block;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 85.6%;
+    background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+  }
+  &__rectangle{
+    width: 55.4%;
+    margin-left: auto;
+  }
+}
+
+.img-bottles{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__bottles{
+    width: 423px;
+    height: 358px;
+    position: relative;
+    background-image: url(../img/pentagon-gold.png);
+    background-size: 100%;
+    margin-bottom: 12px;
+    background-repeat: no-repeat;
   }
   &__description{
+    transform: translateX(-7px);
+  }
+}
+
+.description{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  align-items: center;
+  padding: 0 83px 69px 83px;
+  &__common-words{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 129px 0 0 0;
+    row-gap: 12px;
   }
-  &__description-text{
+  &__text{
     max-width: 514px;
     white-space: pre-wrap;
+   font-size: 0;
+    & .text{
+      font-size: 14px;
+    }
   }
-  &__description-gold{
-    max-width: 343px;
+  &__text-gold{
+    max-width: 332px;
+  }
+  &__img-pink {
+    position: absolute;
+    width: 48%;
+    bottom: 19px;
+    left: -19px;
+    transform: rotate(-8deg);
+  }
+  &__img-orange {
+    position: absolute;
+    width: 49%;
+    bottom: 32px;
+    right: -6px;
+    transform: rotate(-19deg);
+  }
+  &__img-black {
+    position: absolute;
+    width: 46%;
+    bottom: 19px;
+    left: 64px;
+    transform: rotate(11deg);
+  }
+  &__img-tea {
+    position: absolute;
+    width: 42%;
+    bottom: 17px;
+    left: 176px;
+    transform: rotate(7deg);
+  }
+}
+
+.honey{
+  &__subtitle{
+    margin: 0 0 10px 0;
+    transform: translateX(-6px);
+  }
+  &__top-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 30px 14px;
+  }
+  &__img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -34px 0 0 0;
+  }
+  &__img{
+    position: absolute;
+    width: 55.5%;
+    left: 89px;
+    transform: rotate(-3deg);
+    bottom: -33px;
+  }
+  &__text-container{
+    max-width: 671px;
+    margin: 43px 0 0 0;
+    line-height: 19.38px;
+  }
+  &__text-gold {
+    margin: 0 0 30px 0;
+  }
+  &__text-item {
+    margin: 0 0 23px 0;
+  }
+  &__button{
+    width: 158px;
+    margin: 22px 0 0 0;
+    transform: translateX(-10px);
+  }
+  &__bottom-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__advantages{
+    flex-basis: 37.5%;
+  }
+  &__specifications{
+    flex-basis: 50%;
+  }
+  &__advantages-title{
+    text-align: center;
+    margin: 0 0 36px 0;
+  }
+  &__specifications-title{
+    text-align: center;
+  }
+}
+
+.block{
+  text-align: center;
+  &__body{
+    align-items: center;
+    width: 100%;
+  }
+  &__text-top {
+    margin: 0 0 10px 0;
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    max-width: 261px;
+    padding-top: 80px;
+    &::before, &::after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+    }
+    &::before{
+      width: 78px;
+      height: 63px;
+      top: 0;
+      background-image: url("../img/products/pentagon-black.png");
+    }
+    &::after{
+      width: 45px;
+      height: 46px;
+      top: 8px;
+      background-image: url("../img/logo.svg");
+      background-size: cover;
+    }
+  }
+  &__button{
+    text-decoration-line: underline;
+    color: #B0A33D;
+    cursor: pointer;
   }
 }
 
