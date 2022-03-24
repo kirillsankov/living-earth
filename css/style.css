@@ -455,15 +455,30 @@ body.lock {
   -webkit-text-fill-color: transparent;
   font-size: 24px;
 }
-.products__rectangle {
-  width: 55.4%;
+.products__rectangle-right {
+  width: 55.7%;
   margin-left: auto;
+}
+.products__rectangle-left {
+  width: 53%;
+  margin-right: auto;
+}
+.products__button {
+  text-decoration-line: underline;
+  color: #B0A33D;
+  cursor: pointer;
 }
 
 .img-bottles {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.img-bottles__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: -34px 0 0 0;
 }
 .img-bottles__bottles {
   width: 423px;
@@ -474,8 +489,17 @@ body.lock {
   margin-bottom: 12px;
   background-repeat: no-repeat;
 }
+.img-bottles__subtitle {
+  margin: 0 0 10px 0;
+  transform: translateX(-6px);
+}
 .img-bottles__description {
   transform: translateX(-7px);
+}
+.img-bottles__button {
+  width: 158px;
+  margin: 22px 0 0 0;
+  transform: translateX(-10px);
 }
 
 .description {
@@ -533,20 +557,13 @@ body.lock {
   transform: rotate(7deg);
 }
 
-.honey__subtitle {
-  margin: 0 0 10px 0;
-  transform: translateX(-6px);
+.honey {
+  padding: 0 0 78px 0;
 }
 .honey__top-container {
   display: flex;
   justify-content: space-between;
   margin: 0 0 30px 14px;
-}
-.honey__img-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: -34px 0 0 0;
 }
 .honey__img {
   position: absolute;
@@ -566,45 +583,56 @@ body.lock {
 .honey__text-item {
   margin: 0 0 23px 0;
 }
-.honey__button {
-  width: 158px;
-  margin: 22px 0 0 0;
-  transform: translateX(-10px);
-}
 .honey__bottom-container {
   display: flex;
   justify-content: space-between;
 }
 .honey__advantages {
-  flex-basis: 37.5%;
+  flex-basis: 40.3%;
 }
 .honey__specifications {
-  flex-basis: 50%;
+  flex-basis: 47%;
 }
 .honey__advantages-title {
   text-align: center;
   margin: 0 0 36px 0;
+  transform: translateX(-26px);
 }
 .honey__specifications-title {
   text-align: center;
+  margin: 0 0 38px 0;
 }
 
-.block {
+.block__container {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
+  justify-content: space-evenly;
+  column-gap: 24px;
+}
+.block__container_gap {
+  row-gap: 64px;
 }
 .block__body {
-  align-items: center;
   width: 100%;
 }
 .block__text-top {
   margin: 0 0 10px 0;
 }
 .block__item {
-  display: inline-block;
-  vertical-align: top;
   position: relative;
   max-width: 261px;
+  max-height: 100vh;
   padding-top: 80px;
+  flex: 1 1 auto;
+  transition: all 0.3s ease;
+  transform-origin: top center;
+}
+.block__item_hidden {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  transform: scaleY(0);
 }
 .block__item::before, .block__item::after {
   content: "";
@@ -627,9 +655,84 @@ body.lock {
   background-size: cover;
 }
 .block__button {
-  text-decoration-line: underline;
-  color: #B0A33D;
-  cursor: pointer;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.diatomea {
+  display: flex;
+  padding: 0 23px 70px 0;
+}
+.diatomea__right {
+  order: 5;
+  margin: 10px 0 0 0;
+}
+.diatomea__description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+  max-width: 526px;
+  margin: 43px 0 30px 80px;
+}
+.diatomea__img {
+  position: absolute;
+  width: 67%;
+  transform: rotate(5deg);
+  bottom: -52px;
+  left: 66px;
+}
+
+.applications__title {
+  text-align: center;
+  margin: 0 0 26px 0;
+}
+
+.fertilizer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 16px;
+}
+.fertilizer__structure {
+  max-width: 665px;
+  padding: 39px 0 0 62px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.fertilizer__application {
+  max-width: 440px;
+  margin: 38px 0 0 0;
+}
+.fertilizer__application-title {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+.fertilizer__application-text {
+  margin: 0 0 0 13px;
+}
+.fertilizer__effectiveness {
+  max-width: 540px;
+  margin: 39px 0 0 165px;
+}
+.fertilizer__effectiveness-title {
+  text-align: center;
+  margin-bottom: 29px;
+  transform: translateX(-55px);
+}
+.fertilizer__effectiveness-item {
+  list-style: disc;
+}
+.fertilizer__effectiveness-item_hidden {
+  display: none;
+}
+.fertilizer__button {
+  margin-top: 3px;
+}
+.fertilizer__img {
+  position: relative;
+  width: 60%;
+  bottom: 15px;
+  left: -24px;
 }
 
 /*=============================================*/

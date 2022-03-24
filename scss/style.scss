@@ -456,16 +456,31 @@ body.lock{
     -webkit-text-fill-color: transparent;
     font-size: 24px;
   }
-  &__rectangle{
-    width: 55.4%;
+  &__rectangle-right{
+    width: 55.7%;
     margin-left: auto;
+  }
+  &__rectangle-left{
+    width: 53%;
+    margin-right: auto;
+  }
+  &__button{
+    text-decoration-line: underline;
+    color: #B0A33D;
+    cursor: pointer;
   }
 }
 
 .img-bottles{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -34px 0 0 0;
+  }
   &__bottles{
     width: 423px;
     height: 358px;
@@ -475,8 +490,17 @@ body.lock{
     margin-bottom: 12px;
     background-repeat: no-repeat;
   }
+  &__subtitle{
+    margin: 0 0 10px 0;
+    transform: translateX(-6px);
+  }
   &__description{
     transform: translateX(-7px);
+  }
+  &__button{
+    width: 158px;
+    margin: 22px 0 0 0;
+    transform: translateX(-10px);
   }
 }
 
@@ -536,20 +560,12 @@ body.lock{
 }
 
 .honey{
-  &__subtitle{
-    margin: 0 0 10px 0;
-    transform: translateX(-6px);
-  }
+  padding: 0 0 78px 0;
+
   &__top-container{
     display: flex;
     justify-content: space-between;
     margin: 0 0 30px 14px;
-  }
-  &__img-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: -34px 0 0 0;
   }
   &__img{
     position: absolute;
@@ -569,45 +585,58 @@ body.lock{
   &__text-item {
     margin: 0 0 23px 0;
   }
-  &__button{
-    width: 158px;
-    margin: 22px 0 0 0;
-    transform: translateX(-10px);
-  }
   &__bottom-container{
     display: flex;
     justify-content: space-between;
   }
   &__advantages{
-    flex-basis: 37.5%;
+    flex-basis: 40.3%;
   }
   &__specifications{
-    flex-basis: 50%;
+    flex-basis: 47%;
   }
   &__advantages-title{
     text-align: center;
     margin: 0 0 36px 0;
+    transform: translateX(-26px);
   }
   &__specifications-title{
     text-align: center;
+    margin: 0 0 38px 0;
   }
 }
 
 .block{
-  text-align: center;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    column-gap: 24px;
+    &_gap{
+      row-gap: 64px;
+    }
+  }
   &__body{
-    align-items: center;
     width: 100%;
   }
   &__text-top {
     margin: 0 0 10px 0;
   }
   &__item{
-    display: inline-block;
-    vertical-align: top;
     position: relative;
     max-width: 261px;
+    max-height: 100vh;
     padding-top: 80px;
+    flex: 1 1 auto;
+    transition: all 0.3s ease;
+    transform-origin: top center;
+    &_hidden{
+      max-height: 0;
+      padding: 0;
+      opacity: 0;
+      transform: scaleY(0);
+    }
     &::before, &::after{
       content: "";
       position: absolute;
@@ -630,12 +659,87 @@ body.lock{
     }
   }
   &__button{
-    text-decoration-line: underline;
-    color: #B0A33D;
-    cursor: pointer;
+     margin: 10px 0 0 0;
+     text-align: center;
+   }
+}
+
+.diatomea{
+  display: flex;
+  padding: 0 23px 70px 0;
+  &__right{
+    order: 5;
+    margin: 10px 0 0 0;
+  }
+  &__description{
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    max-width: 526px;
+    margin: 43px 0 30px 80px;
+  }
+  &__img{
+    position: absolute;
+    width: 67%;
+    transform: rotate(5deg);
+    bottom: -52px;
+    left: 66px;
+  }
+}
+.applications{
+  &__title{
+    text-align: center;
+    margin: 0 0 26px 0;
   }
 }
 
+.fertilizer{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 16px;
+  &__structure{
+    max-width: 665px;
+    padding: 39px 0 0 62px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+  &__application{
+    max-width: 440px;
+    margin: 38px 0 0 0;
+  }
+  &__application-title{
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  &__application-text {
+    margin: 0 0 0 13px;
+  }
+  &__effectiveness{
+    max-width: 540px;
+    margin: 39px 0 0 165px;
+  }
+  &__effectiveness-title{
+    text-align: center;
+    margin-bottom: 29px;
+    transform: translateX(-55px);
+  }
+  &__effectiveness-item{
+    list-style: disc;
+    &_hidden{
+      display: none;
+    }
+  }
+  &__button{
+    margin-top: 3px;
+  }
+  &__img{
+    position: relative;
+    width: 60%;
+    bottom: 15px;
+    left: -24px;
+  }
+}
 /*=============================================*/
 @media (max-width: 1200px) {
   .company{

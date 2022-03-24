@@ -2,6 +2,10 @@
 const iconMenu = document.querySelector('.nav__icon-burger');
 const introductoryBottles = document.querySelectorAll('.introductory__bottle');
 
+const buttonsAdvantages = document.querySelectorAll(".block__button");
+
+const fertilizerEffectivenessItem = document.querySelectorAll('.fertilizer__effectiveness-item');
+const fertilizerButton = document.querySelector('.fertilizer__button');
 
 if(iconMenu){
     const bodyMenu = document.querySelector('.nav__body');
@@ -22,4 +26,28 @@ if(introductoryBottles.length !== 0){
            }
        }, 500);
    });
+}
+
+if(buttonsAdvantages.length !== 0){
+        for(let buttonAdvantages of buttonsAdvantages){
+            let blockContainer = buttonAdvantages.parentNode.querySelector('.block__container');
+            let blocksHidden = blockContainer.querySelectorAll('.block__item_hidden');
+            buttonAdvantages.addEventListener('click', () =>{
+                for(let block of blocksHidden){
+                    block.classList.toggle('block__item_hidden');
+                }
+                blockContainer.classList.toggle('block__container_gap');
+            })
+        }
+}
+
+if(fertilizerEffectivenessItem.length !== 0){
+    for(let i = 5; i <  fertilizerEffectivenessItem.length; i++){
+        fertilizerEffectivenessItem[i].classList.add('fertilizer__effectiveness-item_hidden');
+    }
+    fertilizerButton.addEventListener('click', ()=>{
+        for(let i = 5; i <  fertilizerEffectivenessItem.length; i++){
+            fertilizerEffectivenessItem[i].classList.toggle('fertilizer__effectiveness-item_hidden');
+        }
+    })
 }
