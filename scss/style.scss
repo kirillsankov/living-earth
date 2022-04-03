@@ -42,8 +42,12 @@ body.lock{
 }
 .button{
   width: 100%;
+  color: #191919;
   font-weight: bold;
   font-size: 0.85em;
+  text-align: center;
+  word-break: break-word;
+  text-transform: uppercase;
   padding: 11px;
   box-shadow: 7px 7px 10px #000000;
   background-image:  linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
@@ -230,7 +234,7 @@ body.lock{
        top: -579px;
        left: 266px;
      }
-     &_tea{
+     &_honey{
        top: -277px;
        right: 194px;
      }
@@ -238,7 +242,7 @@ body.lock{
        top: -256px;
        right: 94px;
      }
-     &_tea, &_pink{
+     &_honey, &_pink{
        transform: translateX(100%);
      }
      &_black, &_orange{
@@ -432,15 +436,17 @@ body.lock{
 /*=============================================*/
 
 .products{
+  position: relative;
   background-image: url("../img/products/petagon-background.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
+  overflow: hidden;
   &__title{
     font-size: 24px;
     text-align: center;
     padding-top: 57px;
-    margin-bottom: 38px;
+    margin-bottom: 52px;
   }
   &__img-text{
     font-size: 12px;
@@ -469,6 +475,22 @@ body.lock{
     color: #B0A33D;
     cursor: pointer;
   }
+
+}
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  &__button{
+    width: 158px;
+  }
+  &__rectangle-left{
+    width: 36.1%;
+  }
+  &__rectangle-right{
+    width: 36.1%;
+  }
 }
 
 .img-bottles{
@@ -482,25 +504,23 @@ body.lock{
     margin: -34px 0 0 0;
   }
   &__bottles{
-    width: 423px;
+    width: 389px;
     height: 358px;
     position: relative;
     background-image: url(../img/pentagon-gold.png);
     background-size: 100%;
-    margin-bottom: 12px;
     background-repeat: no-repeat;
   }
   &__subtitle{
-    margin: 0 0 10px 0;
-    transform: translateX(-6px);
+    margin: 0 0 22px 0;
+    width: 263px;
   }
   &__description{
-    transform: translateX(-7px);
+    transform: translateX(3px);
   }
   &__button{
     width: 158px;
     margin: 22px 0 0 0;
-    transform: translateX(-10px);
   }
 }
 
@@ -509,13 +529,13 @@ body.lock{
   justify-content: space-between;
   column-gap: 15px;
   align-items: center;
-  padding: 0 83px 69px 83px;
+  padding: 0 111px 69px 83px;
   &__common-words{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 129px 0 0 0;
+    margin: 112px 0 0 0;
     row-gap: 12px;
   }
   &__text{
@@ -531,31 +551,31 @@ body.lock{
   }
   &__img-pink {
     position: absolute;
-    width: 48%;
-    bottom: 19px;
-    left: -19px;
+    width: 51.5%;
+    bottom: 32px;
+    left: -22px;
     transform: rotate(-8deg);
   }
   &__img-orange {
     position: absolute;
-    width: 49%;
-    bottom: 32px;
-    right: -6px;
+    width: 54%;
+    bottom: 44px;
+    right: -34px;
     transform: rotate(-19deg);
   }
   &__img-black {
     position: absolute;
-    width: 46%;
-    bottom: 19px;
-    left: 64px;
+    width: 49.6%;
+    bottom: 32px;
+    left: 58px;
     transform: rotate(11deg);
   }
-  &__img-tea {
+  &__img-honey {
     position: absolute;
-    width: 42%;
-    bottom: 17px;
-    left: 176px;
-    transform: rotate(7deg);
+    width: 46%;
+    bottom: 30px;
+    left: 167px;
+    transform: rotate(8deg);;
   }
 }
 
@@ -565,14 +585,15 @@ body.lock{
   &__top-container{
     display: flex;
     justify-content: space-between;
-    margin: 0 0 30px 14px;
+    column-gap: 30px;
+    margin: 0 0 30px 22px;
   }
   &__img{
     position: absolute;
-    width: 55.5%;
-    left: 89px;
+    width: 60.5%;
+    left: 81px;
     transform: rotate(-3deg);
-    bottom: -33px;
+    bottom: -23px;
   }
   &__text-container{
     max-width: 671px;
@@ -585,15 +606,20 @@ body.lock{
   &__text-item {
     margin: 0 0 23px 0;
   }
+  &__text-button{
+    text-align: center;
+    display: none;
+  }
   &__bottom-container{
     display: flex;
     justify-content: space-between;
+    column-gap: 15px;
   }
   &__advantages{
-    flex-basis: 40.3%;
+    flex-basis: 469px;
   }
   &__specifications{
-    flex-basis: 47%;
+    flex-basis: 552px;
   }
   &__advantages-title{
     text-align: center;
@@ -609,13 +635,11 @@ body.lock{
 .block{
   &__container{
     display: flex;
-    flex-wrap: wrap;
     text-align: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     column-gap: 24px;
-    &_gap{
-      row-gap: 64px;
-    }
+    row-gap: 64px;
   }
   &__body{
     width: 100%;
@@ -636,6 +660,9 @@ body.lock{
       padding: 0;
       opacity: 0;
       transform: scaleY(0);
+    }
+    &_remove{
+      display: none;
     }
     &::before, &::after{
       content: "";
@@ -665,25 +692,37 @@ body.lock{
 }
 
 .diatomea{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
   padding: 0 23px 70px 0;
+  column-gap: 15px;
+  &__left{
+    grid-row: 1;
+    grid-column: 1;
+  }
   &__right{
-    order: 5;
-    margin: 10px 0 0 0;
+    grid-column: 2;
+    grid-row: 1/3;
+    margin: 10px 27px 0 0;
+  }
+  &__bottom{
+    grid-column: 1;
+    grid-row: 2;
   }
   &__description{
     display: flex;
     flex-direction: column;
     row-gap: 21px;
     max-width: 526px;
-    margin: 43px 0 30px 80px;
+    margin: 40px 0 31px 80px;
   }
   &__img{
     position: absolute;
-    width: 67%;
+    width: 73%;
     transform: rotate(5deg);
-    bottom: -52px;
-    left: 66px;
+    bottom: -38px;
+    left: 64px;
   }
 }
 .applications{
@@ -695,17 +734,17 @@ body.lock{
 
 .fertilizer{
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 0 0 16px;
+  flex-direction: column;
+  padding: 0 0 97px 22px;
   &__structure{
     max-width: 665px;
-    padding: 39px 0 0 62px;
+    padding: 39px 0 0 91px;
     display: flex;
     flex-direction: column;
     row-gap: 14px;
   }
   &__application{
-    max-width: 440px;
+    max-width: 432px;
     margin: 38px 0 0 0;
   }
   &__application-title{
@@ -713,7 +752,7 @@ body.lock{
     margin: 0 0 30px 0;
   }
   &__application-text {
-    margin: 0 0 0 13px;
+    margin: 0 0 0 8px;
   }
   &__effectiveness{
     max-width: 540px;
@@ -735,9 +774,12 @@ body.lock{
   }
   &__img{
     position: relative;
-    width: 60%;
-    bottom: 15px;
-    left: -24px;
+    width: 65%;
+    bottom: 28px;
+    left: -9px;
+  }
+  &__top, &__bottom{
+    display: flex;
   }
 }
 /*=============================================*/
@@ -770,6 +812,17 @@ body.lock{
        justify-content: space-around;
      }
    }
+   .description{
+     &__text{
+       white-space: normal;
+     }
+   }
+   .img-bottles{
+     &__bottles{
+       width: 375px;
+       height: 348px;
+     }
+   }
 }
 @media (max-width: 1089px) {
   .company{
@@ -793,6 +846,14 @@ body.lock{
       font-size: 24px;
       margin: 30px 0 47px 0;
     }
+  }
+  .block{
+    &__container{
+      column-gap: 14px;
+    }
+  }
+  .diatomea{
+    padding: 0 0 70px 0;
   }
 }
 @media (max-width: 980px){
@@ -845,6 +906,109 @@ body.lock{
     }
     &__map{
       margin-top: 70px;
+    }
+  }
+  .products{
+    &__title{
+      padding-top: 37px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .description{
+    padding: 0 30px 42px 30px;
+    &__img-black{
+      left: 52px;
+    }
+    &__img-honey{
+      left: 141px;
+    }
+  }
+  .img-bottles{
+    &__bottles{
+      width: 350px;
+      height: 323px;
+    }
+  }
+
+  .honey{
+    padding: 0 0 40px 0;
+    &__text-button{
+      display: block;
+    }
+    &__text-item_hidden{
+      display: none;
+    }
+    &__text-gold {
+      margin: 0 0 20px 0;
+    }
+    &__text-item{
+      margin: 0 0 18px 0;
+    }
+    &__bottom-container{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+    &__advantages-title{
+      transform: translate(0);
+      margin-bottom: 30px;
+    }
+    &__specifications-title{
+      margin-bottom: 30px;
+    }
+    &__advantages, &__specifications{
+      max-width: 536px;
+      flex-basis: auto;
+    }
+  }
+  .block{
+    &__container{
+      row-gap: 30px;
+    }
+    &__item{
+      width: 261px;
+    }
+  }
+
+  .diatomea{
+    padding: 21px 0 51px 0;
+    row-gap: 30px;
+    justify-items: center;
+    &__left{
+      grid-row: 1;
+    }
+    &__right{
+      grid-row: 1;
+    }
+    &__bottom{
+      max-width: 536px;
+      grid-column: 1/3;
+      grid-row: 2;
+    }
+    &__description{
+      margin: 40px 0 31px 50px;
+    }
+  }
+
+  .fertilizer{
+    padding: 0 0 80px 22px;
+    &__structure{
+      padding: 39px 0 0 40px;
+    }
+    &__effectiveness{
+      margin-left: 0;
+      max-width: 50%;
+    }
+    &__application{
+      max-width: 50%;
+    }
+    &__effectiveness-title{
+      transform: translateX(0);
+    }
+    &__bottom{
+      justify-content: space-evenly;
+      column-gap: 70px;
     }
   }
 }
@@ -1021,6 +1185,106 @@ body.lock{
       display: none;
     }
   }
+
+  .products{
+    &__title{
+      padding-top: 30px;
+      margin-bottom: 0;
+    }
+    &__rectangle-right{
+      margin: 0;
+      width: 100%;
+    }
+    &__rectangle-left{
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .description{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 15px;
+    &__common-words{
+      margin: 92px 0 0 0;
+    }
+  }
+
+  .honey{
+    padding: 0 0 41px 0;
+    &__top-container{
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__advantages-title{
+      margin: 0 0 25px 0;
+    }
+    &__specifications-title{
+      margin: 0 0 25px 0;
+    }
+  }
+  .img-bottles {
+    &__container {
+      margin: 20px 5px 0 0;
+    }
+  }
+
+  .block{
+    &__container{
+      row-gap: 35px;
+    }
+  }
+  .diatomea{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 30px;
+    &__right{
+      grid-column: 1;
+      grid-row: 1;
+      margin: 10px 0 0 0;
+    }
+    &__left{
+      grid-column: 1;
+      grid-row: 2;
+    }
+    &__bottom{
+      grid-column: 1;
+      grid-row: 3;
+    }
+    &__description{
+      margin: 0 0 0 22px;
+      max-width: 100%;
+    }
+  }
+
+  .fertilizer{
+    padding: 11px 0 50px 22px;
+    &__structure{
+      padding: 51px 0 0 0;
+      row-gap: 22px;
+    }
+    &__application-text{
+      margin: 0;
+    }
+    &__top, &__bottom{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &__effectiveness, &__application{
+      margin: 30px 0 0 0;
+      max-width: 100%;
+    }
+    &__effectiveness-title, &__application-title{
+      text-align: left;
+      margin: 0 0 15px 0;
+    }
+    &__effectiveness-list{
+      padding: 0 0 0 15px;
+    }
+    &__button{
+      text-align: center;
+    }
+  }
 }
 
 @media (max-width: 540px) {
@@ -1086,6 +1350,119 @@ body.lock{
       margin-top: 29px;
       margin-bottom: 20px;
       transform: translate(-3px);
+    }
+  }
+  .img-bottles{
+    &__bottles{
+      width: 277px;
+      height: 248px;
+      margin-bottom: 16px;
+    }
+    &__button {
+      transform: none;
+    }
+  }
+  .products{
+    &__title{
+      padding-top: 22px;
+    }
+  }
+  .description{
+    padding-left: 0;
+    padding-right: 0;
+    &__common-words{
+      margin: 76px 0 0 0;
+      row-gap: 14px;
+    }
+    &__text-gold{
+      max-width: 196px;
+    }
+    &__img-honey{
+      bottom: 13px;
+      left: 115px;
+    }
+    &__img-orange{
+      bottom: 21px;
+      right: -25px;
+    }
+    &__img-black{
+      left: 40px;
+      bottom: 14px;
+    }
+    &__img-pink{
+      left: -12px;
+      bottom: 16px;
+    }
+    &__bottles{
+      width: 257px;
+      height: 229px;
+      margin-top: 8px;
+      margin-bottom: 13px;
+    }
+  }
+
+  .honey{
+    &__img{
+      width: 61.5%;
+      left: 55px;
+      bottom: -24px;
+    }
+    &__top-container {
+      column-gap: 30px;
+      margin: 0 0 18px -5px;
+    }
+    &__text-container{
+      margin: 31px 0 0 5px;
+    }
+    &__text-gold{
+      margin: 0 0 25px 0;
+      text-align: center;
+    }
+    &__text-item{
+      margin: 0;
+    }
+    &__bottom-container{
+      row-gap: 26px;
+    }
+  }
+  .diatomea{
+    row-gap: 0;
+    &__img{
+      width: 75%;
+      left: 44px;
+    }
+    &__right{
+      margin: 0 0 31px 0;
+    }
+    &__left{
+      margin: 20px 12px 21px 0;
+    }
+    &__bottom{
+      margin: 0 12px 0 0;
+    }
+    &__description{
+      margin: 0;
+      row-gap: 24px;
+      max-width: 270px;
+      align-items: flex-start;
+    }
+  }
+
+  .fertilizer{
+    padding: 11px 0 48px 0;
+    &__structure{
+      max-width: 260px;
+    }
+    &__structure-list {
+      margin: -13px 0 0 0;
+      max-width: 250px;
+    }
+    &__application-text {
+      margin: -5px 0 0 0;
+    }
+    &__effectiveness-list {
+      padding: 0px 0 0 21px;
+      margin-top: -7px;
     }
   }
 }
