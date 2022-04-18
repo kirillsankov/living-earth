@@ -855,9 +855,9 @@ body.lock{
   &__container{
     position: relative;
     overflow: hidden;
-    max-width: 986px;
+    max-width: 1006px;
+    min-height: 510px;
     margin: 0 auto;
-    transition: all 1s;
   }
   &__image{
     display: flex;
@@ -875,21 +875,20 @@ body.lock{
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    left: -242px;
-    min-height: 463px;
+    left: -231px;
     white-space: nowrap;
     min-width: 200px;
-    transition: all 1s;
   }
   &__item{
     width: 200px;
-    height: 284px;
+    min-height: 284px;
     transition: all 1s;
     flex-shrink: 0;
     margin-right: 42px;
-    &:last-of-type{
+    position: relative;
+  /*  &:last-of-type{
       margin-right: 0;
-    }
+    }*/
     &_anim{
       width: 0;
       margin: 0;
@@ -897,11 +896,17 @@ body.lock{
     &_active{
       margin: 0 129px 0 87px;
       width: 326px;
-      height: 463px;
+      min-height: 463px;
     }
     & img{
         width: 100%;
     }
+  }
+  &__text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
   }
   &__button{
     position: absolute;

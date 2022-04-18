@@ -134,44 +134,53 @@ const buttonRight = document.querySelector('.slider-documents__button_right');
 
 
 
-buttonLeft.addEventListener('click' , () => {
-    const sliderItems = sliderDocumentContainer.querySelectorAll('.slider-documents__item');
-    for(let i = 0; i < sliderItems.length; i++) {
+buttonLeft.addEventListener('click' , clickButtonLeft);
+buttonRight.addEventListener('click' , clickButtonRight);
 
-        if(sliderItems[i].classList.contains('slider-documents__item_active') && i === 0) {
-            sliderItems[i].classList.remove('slider-documents__item_active');
-            sliderItems[sliderItems.length - 1].classList.add('slider-documents__item_active');
+
+function setItemActive (itemsArray, offsetIndex, lastElement, firstElement ) {
+    for(let i = 0; i < itemsArray.length; i++) {
+        if(itemsArray[i].classList.contains('slider-documents__item_active') && i === lastElement) {
+            itemsArray[i].classList.remove('slider-documents__item_active');
+            itemsArray[firstElement].classList.add('slider-documents__item_active');
             break;
         }
-        if(sliderItems[i].classList.contains('slider-documents__item_active')){
-            sliderItems[i].classList.remove('slider-documents__item_active');
-            sliderItems[i - 1].classList.add('slider-documents__item_active');
-            break;
-        }
-    }
-    sliderItems[sliderItems.length - 1].classList.add('slider-documents__item_anim');
-    sliderDocumentTracer.insertAdjacentElement("afterbegin", sliderItems[sliderItems.length - 1]);
-    setTimeout(() => {
-        sliderItems[sliderItems.length - 1].classList.remove('slider-documents__item_anim');
-    }, 0)
-})
-buttonRight.addEventListener('click' , () => {
-    const sliderItems = sliderDocumentContainer.querySelectorAll('.slider-documents__item');
-    for(let i = 0; i < sliderItems.length; i++) {
-        if(sliderItems[i].classList.contains('slider-documents__item_active') && i === sliderItems.length - 1) {
-            sliderItems[i].classList.remove('slider-documents__item_active');
-            sliderItems[0].classList.add('slider-documents__item_active');
-            break;
-        }
-        if(sliderItems[i].classList.contains('slider-documents__item_active')) {
-            sliderItems[i].classList.remove('slider-documents__item_active');
-            sliderItems[i + 1].classList.add('slider-documents__item_active');
+        if(itemsArray[i].classList.contains('slider-documents__item_active')) {
+            itemsArray[i].classList.remove('slider-documents__item_active');
+            itemsArray[i + offsetIndex].classList.add('slider-documents__item_active');
             break;
         }
     }
+}
+function setNextSliderItem(sliderItems){
     sliderItems[0].classList.add('slider-documents__item_anim');
     setTimeout(()=>{
         sliderDocumentTracer.insertAdjacentElement('beforeend',sliderItems[0]);
         sliderItems[0].classList.remove('slider-documents__item_anim');
     }, 1000)
-})
+}
+function setPreviousSliderItem(sliderItems){
+    sliderItems[sliderItems.length - 1].classList.add('slider-documents__item_anim');
+    sliderDocumentTracer.insertAdjacentElement("afterbegin", sliderItems[sliderItems.length - 1]);
+    setTimeout(() => {
+        sliderItems[sliderItems.length - 1].classList.remove('slider-documents__item_anim');
+    }, 0)
+}
+function expectCompletionListener(button, listener){
+    button.removeEventListener('click' , listener);
+    setTimeout(()=> {
+        button.addEventListener('click' , listener);
+    },1000);
+}
+function clickButtonRight(){
+    const sliderItems = sliderDocumentContainer.querySelectorAll('.slider-documents__item');
+    setItemActive(sliderItems, 1, sliderItems.length - 1,0);
+    setNextSliderItem(sliderItems);
+    expectCompletionListener(buttonRight, clickButtonRight)
+}
+function clickButtonLeft(){
+    const sliderItems = sliderDocumentContainer.querySelectorAll('.slider-documents__item');
+    setItemActive(sliderItems, -1, 0, sliderItems.length - 1);
+    setPreviousSliderItem(sliderItems);
+    expectCompletionListener(buttonLeft, clickButtonLeft)
+}
