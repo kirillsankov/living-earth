@@ -837,7 +837,7 @@ body.lock {
 /*=============================================*/
 .documents {
   position: relative;
-  padding: 0 0 94px 0;
+  padding: 0 0 88px 0;
 }
 .documents::before {
   content: "";
@@ -979,6 +979,110 @@ body.lock {
   background: gold;
   top: 16.3px;
   right: 13.2px;
+}
+
+/*=============================================*/
+.news {
+  position: relative;
+}
+.news__title {
+  font-size: 24px;
+  text-align: center;
+  padding: 0 0 76px 0;
+}
+.news__slider {
+  margin-bottom: 80px;
+}
+.news::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 600px;
+  background: url(../img/logo.svg) no-repeat;
+  background-size: 100% auto;
+  right: -90px;
+  bottom: 60px;
+  opacity: 30%;
+}
+
+.slider-news__item {
+  margin-right: 120px;
+}
+.slider-news__container {
+  max-width: 343px;
+}
+.slider-news__date {
+  text-align: right;
+  margin-bottom: 19px;
+}
+.slider-news__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  line-height: 19.38px;
+}
+.slider-news__img {
+  margin-bottom: 19px;
+}
+.slider-news__img::after {
+  content: "";
+  display: block;
+  height: 11px;
+  width: 100%;
+  background-image: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+.slick-arrow {
+  display: block;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url(../img/pentagon-gold.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+}
+.slick-arrow::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border: 3px solid gold;
+  border-left: none;
+  border-bottom: none;
+  top: 13px;
+  right: 12px;
+}
+.slick-arrow::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: gold;
+  top: 16.3px;
+  right: 13.2px;
+}
+.slick-arrow.slick-prev {
+  left: 120px;
+  transform: translateY(-50%) rotate(180deg);
+}
+.slick-arrow.slick-next {
+  right: 120px;
+  transform: translateY(-50%);
 }
 
 /*=============================================*/
