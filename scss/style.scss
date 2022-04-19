@@ -1001,12 +1001,12 @@ body.lock{
   &::after{
     content: "";
     position: absolute;
-    width: 550px;
-    height: 600px;
+    width: 458px;
+    height: 550px;
     background: url(../img/logo.svg) no-repeat;
-    background-size: 100% auto;
-    right: -90px;
-    bottom: 60px;
+    background-size: auto 100%;
+    right: 0;
+    bottom: 111px;
     opacity: 30%;
   }
 }
@@ -1061,25 +1061,10 @@ body.lock{
   position: absolute;
   top: 50%;
   &::before{
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
-    border: 3px solid gold;
-    border-left: none;
-    border-bottom: none;
-    top: 13px;
-    right: 12px;
+    @extend .arrow;
   }
   &::after{
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 3px;
-    background: gold;
-    top: 16.3px;
-    right: 13.2px;
+    @extend .arrow;
   }
   &.slick-prev{
     left: 120px;
