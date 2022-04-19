@@ -111,6 +111,8 @@ body.lock {
   margin: 0 auto;
   padding: 0 18px 0 20px;
   max-width: 1210px;
+  z-index: 2;
+  position: relative;
 }
 
 .rectangle {
@@ -257,19 +259,6 @@ body.lock {
   overflow: hidden;
   position: relative;
 }
-.info::before {
-  content: "";
-  width: 592px;
-  height: 539px;
-  position: absolute;
-  bottom: 33px;
-  right: 0;
-  transform: translateX(61.7%);
-  background-image: url(../img/logo.svg), url(../img/pentagon.png);
-  background-size: 270px, 100%;
-  background-repeat: no-repeat;
-  background-position: 41% 58%, center;
-}
 .info::after {
   content: "";
   width: 544px;
@@ -282,6 +271,30 @@ body.lock {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+}
+.info__pentagon-logo {
+  content: "";
+  width: 592px;
+  height: 537px;
+  position: absolute;
+  bottom: 34px;
+  right: 56px;
+  transform: translateX(61.7%);
+  background-image: url(../img/pentagon.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.info__pentagon-logo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-image: url(../img/logo.svg);
+  background-size: auto 50%;
+  background-repeat: no-repeat;
+  background-position: 129px 150px;
+  opacity: 0.3;
 }
 
 .company__container {
@@ -474,6 +487,49 @@ body.lock {
   color: #B0A33D;
   cursor: pointer;
 }
+.products__pentagon {
+  position: absolute;
+  width: 564px;
+  height: 463px;
+  background-image: url(../img/pentagon.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  left: -374px;
+  bottom: 560px;
+}
+.products__logo-opacity {
+  position: absolute;
+  height: 387px;
+  width: 387px;
+  right: -218px;
+  bottom: 123px;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  opacity: 0.3;
+}
+.products__pentagon-logo {
+  position: absolute;
+  height: 347px;
+  width: 407px;
+  right: -218px;
+  top: 874px;
+  background-image: url(../img/pentagon.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.products__pentagon-logo::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 216px 51%;
+  background-position: 72px 96px;
+  opacity: 0.3;
+}
 
 .bottom {
   display: flex;
@@ -509,6 +565,7 @@ body.lock {
   background-image: url(../img/pentagon-gold.png);
   background-size: 100%;
   background-repeat: no-repeat;
+  filter: drop-shadow(7px 7px 11px #000000);
 }
 .img-bottles__subtitle {
   margin: 0 0 22px 0;
@@ -778,6 +835,153 @@ body.lock {
 }
 
 /*=============================================*/
+.documents {
+  position: relative;
+  padding: 0 0 94px 0;
+}
+.documents::before {
+  content: "";
+  display: block;
+  width: 553px;
+  height: 427px;
+  position: absolute;
+  left: -248px;
+  bottom: -94px;
+  background-image: url(../img/pentagon.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.documents__title {
+  font-size: 24px;
+  text-align: center;
+  padding: 168px 0 60px 0;
+  position: relative;
+  z-index: 1;
+}
+.documents__slider {
+  position: relative;
+  z-index: 1;
+}
+.documents .container {
+  overflow: hidden;
+}
+.documents .container::after {
+  content: "";
+  display: block;
+  width: 503px;
+  height: 384px;
+  position: absolute;
+  right: 3px;
+  bottom: 284px;
+  background-image: url(../img/pentagon.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.slider-documents__container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1006px;
+  min-height: 510px;
+  margin: 0 auto;
+}
+.slider-documents__image {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+}
+.slider-documents__image::after {
+  content: "";
+  width: 100%;
+  height: 9px;
+  background-image: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+}
+.slider-documents__tracer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  left: -231px;
+  white-space: nowrap;
+  min-width: 200px;
+}
+.slider-documents__item {
+  width: 200px;
+  min-height: 284px;
+  transition: all 1s;
+  flex-shrink: 0;
+  margin-right: 42px;
+  position: relative;
+}
+.slider-documents__item_anim {
+  width: 0;
+  margin: 0;
+}
+.slider-documents__item_active {
+  margin: 0 129px 0 87px;
+  width: 326px;
+  min-height: 463px;
+}
+.slider-documents__item img {
+  width: 100%;
+}
+.slider-documents__text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+.slider-documents__button {
+  position: absolute;
+  width: 41px;
+  height: 36px;
+  background-color: transparent;
+  background-image: url("../img/pentagon-gold.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+.slider-documents__button_left {
+  transform: translate(-250px, -50%);
+}
+.slider-documents__button_right {
+  transform: translate(210px, -50%);
+}
+
+.arrow {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.arrow_left {
+  transform: rotate(180deg);
+}
+.arrow::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border: 3px solid gold;
+  border-left: none;
+  border-bottom: none;
+  top: 13px;
+  right: 12px;
+}
+.arrow::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: gold;
+  top: 16.3px;
+  right: 13.2px;
+}
+
+/*=============================================*/
 @media (max-width: 1200px) {
   .company {
     justify-content: space-around;
@@ -841,6 +1045,13 @@ body.lock {
   .diatomea {
     padding: 0 0 70px 0;
   }
+
+  .slider-documents__tracer {
+    left: -569px;
+  }
+  .slider-documents__container {
+    max-width: 329px;
+  }
 }
 @media (max-width: 980px) {
   .header__log-in {
@@ -893,6 +1104,12 @@ body.lock {
   .products__title {
     padding-top: 37px;
     margin-bottom: 25px;
+  }
+  .products__rectangle-right {
+    width: 50vw;
+  }
+  .products__rectangle-left {
+    width: 50vw;
   }
 
   .description {
@@ -988,6 +1205,10 @@ body.lock {
   .fertilizer__bottom {
     justify-content: space-evenly;
     column-gap: 70px;
+  }
+
+  .documents__title {
+    padding: 138px 0 60px 0;
   }
 }
 @media (max-width: 840px) {
@@ -1153,7 +1374,7 @@ body.lock {
     padding: 0 0 39px 0;
   }
 
-  .info::before, .info::after {
+  .info::after, .info__pentagon-logo {
     display: none;
   }
 
@@ -1168,6 +1389,9 @@ body.lock {
   .products__rectangle-left {
     margin: 0;
     width: 100%;
+  }
+  .products__logo-opacity, .products__pentagon, .products__pentagon-logo {
+    display: none;
   }
 
   .description {
@@ -1253,6 +1477,61 @@ body.lock {
   .fertilizer__button {
     text-align: center;
   }
+
+  .bottom {
+    flex-direction: column;
+  }
+  .bottom::before {
+    width: 320px;
+    height: 247px;
+    position: absolute;
+    content: "";
+    background-image: url(../img/pentagon.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center bottom;
+  }
+  .bottom__rectangle-right {
+    display: none;
+  }
+  .bottom__rectangle-left {
+    width: 100%;
+  }
+  .bottom__button {
+    padding: 90px 0 100px 0;
+    position: relative;
+  }
+
+  .documents {
+    padding: 0 0 40px 0;
+  }
+  .documents::before {
+    display: none;
+  }
+  .documents .container::after {
+    display: none;
+  }
+  .documents__title {
+    padding: 50px 0 25px 0;
+  }
+
+  .slider-documents__container {
+    min-height: 463px;
+  }
+  .slider-documents__tracer {
+    left: -546px;
+  }
+  .slider-documents__item_active {
+    margin: 0 87px 0 87px;
+    width: 280px;
+    min-height: 463px;
+  }
+  .slider-documents__button_left {
+    transform: translate(-210px, -50%);
+  }
+  .slider-documents__button_right {
+    transform: translate(170px, -50%);
+  }
 }
 @media (max-width: 540px) {
   .introductory__container {
@@ -1323,6 +1602,9 @@ body.lock {
     transform: none;
   }
 
+  .products {
+    background-size: 140%;
+  }
   .products__title {
     padding-top: 22px;
   }
@@ -1403,7 +1685,6 @@ body.lock {
   .diatomea__description {
     margin: 0;
     row-gap: 24px;
-    max-width: 270px;
     align-items: flex-start;
   }
 
@@ -1421,8 +1702,34 @@ body.lock {
     margin: -5px 0 0 0;
   }
   .fertilizer__effectiveness-list {
-    padding: 0px 0 0 21px;
+    padding: 0 0 0 21px;
     margin-top: -7px;
+  }
+
+  .documents {
+    padding: 0 0 20px 0;
+  }
+  .documents__title {
+    padding: 32px 0 19px 0;
+  }
+
+  .slider-documents__button_right {
+    transform: translate(110px, -50%);
+  }
+  .slider-documents__button_left {
+    transform: translate(-150px, -50%);
+  }
+  .slider-documents__container {
+    max-width: 217px;
+    min-height: 331px;
+  }
+  .slider-documents__tracer {
+    left: -494px;
+  }
+  .slider-documents__item_active {
+    margin: 0 20px 0 20px;
+    width: 200px;
+    min-height: auto;
   }
 }
 
