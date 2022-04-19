@@ -184,3 +184,11 @@ function clickButtonLeft(){
     setPreviousSliderItem(sliderItems);
     expectCompletionListener(buttonLeft, clickButtonLeft)
 }
+
+$(document).ready(function (){
+    $('.slider-news').slick({
+        slidesToShow: 2,
+        speed: 1000,
+        variableWidth: true,
+    });
+});
