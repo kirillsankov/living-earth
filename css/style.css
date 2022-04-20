@@ -1034,6 +1034,7 @@ body.lock {
 
 .slick-track {
   display: flex;
+  align-items: center;
 }
 
 .slick-list {
@@ -1054,14 +1055,13 @@ body.lock {
   height: 36px;
   position: absolute;
   top: 50%;
+  left: 50%;
 }
 .slick-arrow.slick-prev {
-  left: 120px;
-  transform: translateY(-50%) rotate(180deg);
+  transform: translate(-491px, -72%) rotate(180deg);
 }
 .slick-arrow.slick-next {
-  right: 120px;
-  transform: translateY(-50%);
+  transform: translate(435px, -72%);
 }
 
 /*=============================================*/
@@ -1134,6 +1134,17 @@ body.lock {
   }
   .slider-documents__container {
     max-width: 329px;
+  }
+
+  .slick-list {
+    max-width: 343px;
+  }
+
+  .slick-arrow.slick-prev {
+    transform: translate(-244px, -72%) rotate(180deg);
+  }
+  .slick-arrow.slick-next {
+    transform: translate(205px, -72%);
   }
 }
 @media (max-width: 980px) {
@@ -1292,6 +1303,13 @@ body.lock {
 
   .documents__title {
     padding: 138px 0 60px 0;
+  }
+
+  .news__title {
+    padding: 0 0 50px 0;
+  }
+  .news__slider {
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 840px) {
@@ -1615,6 +1633,13 @@ body.lock {
   .slider-documents__button_right {
     transform: translate(170px, -50%);
   }
+
+  .news::after {
+    display: none;
+  }
+  .news__title {
+    padding: 0 0 25px 0;
+  }
 }
 @media (max-width: 540px) {
   .introductory__container {
@@ -1790,7 +1815,7 @@ body.lock {
   }
 
   .documents {
-    padding: 0 0 20px 0;
+    padding: 0 0 26px 0;
   }
   .documents__title {
     padding: 32px 0 19px 0;
@@ -1813,6 +1838,44 @@ body.lock {
     margin: 0 20px 0 20px;
     width: 200px;
     min-height: auto;
+  }
+
+  .slider-news__item {
+    margin-right: 0;
+  }
+  .slider-news__container {
+    max-width: 280px;
+  }
+  .slider-news__img, .slider-news__date {
+    max-width: 198px;
+    margin: 0 auto 19px auto;
+  }
+  .slider-news__img {
+    margin: 0 auto 10px auto;
+  }
+  .slider-news__date {
+    margin: 0 auto 12px auto;
+  }
+
+  .slick-arrow {
+    z-index: 2;
+  }
+  .slick-arrow.slick-prev {
+    transform: translate(-140px, -279%) rotate(180deg);
+  }
+  .slick-arrow.slick-next {
+    transform: translate(111px, -279%);
+  }
+
+  .slick-list {
+    max-width: 280px;
+  }
+
+  .news__slider {
+    margin-bottom: 40px;
+  }
+  .news__title {
+    padding: 0 0 17px 0;
   }
 }
 

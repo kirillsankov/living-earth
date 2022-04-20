@@ -190,5 +190,11 @@ $(document).ready(function (){
         slidesToShow: 2,
         speed: 1000,
         variableWidth: true,
+        responsive: [
+            {
+                breakpoints: 1089,
+                slidesToShow: 1,
+            }
+        ],
     });
 });
