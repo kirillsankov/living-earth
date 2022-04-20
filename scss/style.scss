@@ -1042,6 +1042,7 @@ body.lock{
 
 .slick-track{
   display: flex;
+  align-items: center;
 }
 .slick-list{
   position: relative;
@@ -1060,6 +1061,7 @@ body.lock{
   height: 36px;
   position: absolute;
   top: 50%;
+  left: 50%;
   &::before{
     @extend .arrow;
   }
@@ -1067,12 +1069,10 @@ body.lock{
     @extend .arrow;
   }
   &.slick-prev{
-    left: 120px;
-    transform: translateY(-50%) rotate(180deg);
+    transform: translate(-491px, -72%) rotate(180deg);
   }
   &.slick-next{
-    right: 120px;
-    transform: translateY(-50%);
+    transform: translate(435px, -72%);;
   }
 }
 /*=============================================*/
@@ -1157,6 +1157,20 @@ body.lock{
       max-width: 329px;
     }
   }
+
+  .slick-list{
+    max-width: 343px;
+  }
+
+  .slick-arrow{
+    &.slick-prev{
+      transform: translate(-244px, -72%) rotate(180deg);
+    }
+    &.slick-next{
+      transform: translate(205px, -72%);
+    }
+  }
+
 }
 @media (max-width: 980px){
   .header{
@@ -1324,6 +1338,16 @@ body.lock{
       padding: 138px 0 60px 0;
     }
   }
+
+  .news{
+    &__title{
+      padding: 0 0 50px 0;
+    }
+    &__slider{
+      margin-bottom: 60px;
+    }
+  }
+
 }
 
 @media (max-width: 840px) {
@@ -1666,7 +1690,14 @@ body.lock{
       }
     }
   }
-
+  .news{
+    &::after{
+      display: none;
+    }
+    &__title{
+      padding: 0 0 25px 0;
+    }
+  }
 }
 
 @media (max-width: 540px) {
@@ -1848,7 +1879,7 @@ body.lock{
     }
   }
   .documents{
-    padding: 0 0 20px 0;
+    padding: 0 0 26px 0;
     &__title{
       padding: 32px 0 19px 0;
     }
@@ -1875,6 +1906,45 @@ body.lock{
         width: 200px;
         min-height: auto;
       }
+    }
+  }
+  .slider-news{
+    &__item{
+      margin-right: 0;
+    }
+    &__container{
+      max-width: 280px;
+    }
+    &__img, &__date{
+      max-width: 198px;
+      margin: 0 auto 19px auto;
+    }
+    &__img{
+      margin: 0 auto 10px auto;
+    }
+    &__date{
+      margin: 0 auto 12px auto;
+    }
+  }
+  .slick-arrow{
+    z-index: 2;
+    &.slick-prev{
+      transform: translate(-140px, -279%) rotate(180deg);
+    }
+    &.slick-next{
+      transform: translate(111px, -279%);;
+    }
+  }
+  .slick-list{
+    max-width: 280px;
+  }
+
+  .news{
+    &__slider{
+      margin-bottom: 40px;
+    }
+    &__title{
+      padding: 0 0 17px 0;
     }
   }
 }
