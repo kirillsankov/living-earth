@@ -991,7 +991,7 @@ body.lock {
   padding: 0 0 76px 0;
 }
 .news__slider {
-  margin-bottom: 80px;
+  margin-bottom: 88px;
 }
 .news::after {
   content: "";
@@ -1062,6 +1062,86 @@ body.lock {
 }
 .slick-arrow.slick-next {
   transform: translate(435px, -72%);
+}
+
+/*=============================================*/
+.cooperation {
+  position: relative;
+  overflow: hidden;
+}
+.cooperation::after, .cooperation::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.cooperation::after {
+  transform: translate(16%, -45%);
+  width: 441px;
+  height: 505px;
+  background-image: url("../img/cooperation/book.png");
+}
+.cooperation::before {
+  transform: translate(92.1%, -92.8%);
+  width: 298px;
+  height: 257px;
+  background-image: url("../img/pentagon.png");
+}
+.cooperation__title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.cooperation__form {
+  display: flex;
+  flex-direction: column;
+}
+.cooperation__wrapper {
+  max-width: 528px;
+  padding: 0 0 0 167px;
+  margin-right: auto;
+}
+.cooperation__description {
+  margin-bottom: 53px;
+}
+.cooperation__item {
+  position: relative;
+  margin: 0 20px 35px 0;
+}
+.cooperation__item_margin-big {
+  margin-bottom: 45px;
+}
+.cooperation__button {
+  max-width: 158px;
+}
+
+.form__input, .form__textarea {
+  width: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid;
+  border-image-source: linear-gradient(90deg, rgba(255, 234, 71, 0.5) 0%, rgba(147, 134, 34, 0.5) 31.25%, rgba(243, 216, 0, 0.5) 68.23%, rgba(255, 234, 71, 0.5) 100%);
+  border-image-slice: 1;
+}
+.form__input {
+  height: 36px;
+}
+.form__textarea {
+  min-height: 83px;
+}
+.form__text {
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: 22px;
+  padding: 0 10px;
+  background-color: #191919;
+  z-index: 2;
 }
 
 /*=============================================*/

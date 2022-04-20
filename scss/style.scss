@@ -996,7 +996,7 @@ body.lock{
     padding: 0 0 76px 0;
   }
   &__slider{
-    margin-bottom: 80px;
+    margin-bottom: 88px;
   }
   &::after{
     content: "";
@@ -1075,6 +1075,91 @@ body.lock{
     transform: translate(435px, -72%);;
   }
 }
+
+/*=============================================*/
+
+.cooperation{
+  position: relative;
+  overflow: hidden;
+  &::after, &::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  &::after{
+    transform: translate(16%, -45%);
+    width: 441px;
+    height: 505px;
+    background-image: url("../img/cooperation/book.png");
+  }
+  &::before{
+    transform: translate(92.1%, -92.8%);
+    width: 298px;
+    height: 257px;
+    background-image: url("../img/pentagon.png");
+  }
+  &__title{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+  }
+  &__wrapper{
+    max-width: 528px;
+    padding: 0 0 0 167px;
+    margin-right: auto;
+  }
+  &__description{
+    margin-bottom: 53px;
+  }
+  &__item{
+    position: relative;
+    margin: 0 20px 35px 0;
+    &_margin-big{
+      margin-bottom: 45px;
+    }
+  }
+  &__button{
+    max-width: 158px;
+  }
+}
+
+.form{
+  &__input,  &__textarea{
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 234, 71, 0.5) 0%, rgba(147, 134, 34, 0.5) 31.25%,
+            rgba(243, 216, 0, 0.5) 68.23%, rgba(255, 234, 71, 0.5) 100%);
+    border-image-slice: 1;
+  }
+  &__input{
+    height: 36px;
+  }
+  &__textarea{
+    min-height: 83px;
+  }
+  &__text{
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 22px;
+    padding: 0 10px;
+    background-color: #191919;
+    z-index: 2;
+  }
+}
+
 /*=============================================*/
 @media (max-width: 1200px) {
   .company{
