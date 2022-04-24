@@ -1081,6 +1081,7 @@ body.lock{
 .cooperation{
   position: relative;
   overflow: hidden;
+  padding-bottom: 119px;
   & .container{
     display: flex;
     justify-content: space-between;
@@ -1102,10 +1103,6 @@ body.lock{
     font-size: 24px;
     text-align: center;
     margin-bottom: 55px;
-  }
-  &__form{
-    display: flex;
-    flex-direction: column;
   }
   &__wrapper{
     max-width: 528px;
@@ -1133,6 +1130,8 @@ body.lock{
 }
 
 .form{
+  display: flex;
+  flex-direction: column;
   &__input,  &__textarea{
     width: 100%;
     color: inherit;
@@ -1165,6 +1164,88 @@ body.lock{
     padding: 0 10px;
     background-color: #191919;
     z-index: 2;
+  }
+}
+/*=============================================*/
+
+.contacts{
+  &__decoration{
+    position: absolute;
+    background: url('../img/pentagon.png') no-repeat;
+    background-size: 100% auto;
+    &_one{
+
+    }
+    &_two{
+
+    }
+  }
+  &__title{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 54px;
+  }
+  &__description{
+    line-height: inherit;
+    margin-bottom: 44px;
+  }
+  &__email{
+    position: relative;
+    &::before{
+      position: absolute;
+      left: -31px;
+      font-size: 16px;
+      background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__address{
+    position: relative;
+    width: 183px;
+    margin-bottom: 19px;
+    &::before{
+      position: absolute;
+      left: -34px;
+      top: 19px;
+      font-size: 25px;
+      background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__name{
+    margin: 0 0 21px 6px;
+  }
+  &__container{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    position: relative;
+    margin: 0 0 35px 0;
+  }
+  &__item_big{
+    margin-bottom: 45px;
+  }
+  &__left{
+    width: 444px;
+    height: 384px;
+    background: url("../img/pentagon.png") no-repeat ;
+    background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-65px, 7px);
+  }
+  &__right{
+    max-width: 345px;
+    flex-grow: 1;
+    transform: translateX(104px);
+  }
+  &__info{
+    margin: 0 0 19px 35px;
   }
 }
 

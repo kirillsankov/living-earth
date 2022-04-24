@@ -1068,6 +1068,7 @@ body.lock {
 .cooperation {
   position: relative;
   overflow: hidden;
+  padding-bottom: 119px;
 }
 .cooperation .container {
   display: flex;
@@ -1090,10 +1091,6 @@ body.lock {
   font-size: 24px;
   text-align: center;
   margin-bottom: 55px;
-}
-.cooperation__form {
-  display: flex;
-  flex-direction: column;
 }
 .cooperation__wrapper {
   max-width: 528px;
@@ -1119,6 +1116,10 @@ body.lock {
   max-width: 158px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
 .form__input, .form__textarea {
   width: 100%;
   color: inherit;
@@ -1150,6 +1151,80 @@ body.lock {
   padding: 0 10px;
   background-color: #191919;
   z-index: 2;
+}
+
+/*=============================================*/
+.contacts__decoration {
+  position: absolute;
+  background: url("../img/pentagon.png") no-repeat;
+  background-size: 100% auto;
+}
+.contacts__title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 54px;
+}
+.contacts__description {
+  line-height: inherit;
+  margin-bottom: 44px;
+}
+.contacts__email {
+  position: relative;
+}
+.contacts__email::before {
+  position: absolute;
+  left: -31px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contacts__address {
+  position: relative;
+  width: 183px;
+  margin-bottom: 19px;
+}
+.contacts__address::before {
+  position: absolute;
+  left: -34px;
+  top: 19px;
+  font-size: 25px;
+  background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contacts__name {
+  margin: 0 0 21px 6px;
+}
+.contacts__container {
+  display: flex;
+  justify-content: center;
+}
+.contacts__item {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+.contacts__item_big {
+  margin-bottom: 45px;
+}
+.contacts__left {
+  width: 444px;
+  height: 384px;
+  background: url("../img/pentagon.png") no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-65px, 7px);
+}
+.contacts__right {
+  max-width: 345px;
+  flex-grow: 1;
+  transform: translateX(104px);
+}
+.contacts__info {
+  margin: 0 0 19px 35px;
 }
 
 /*=============================================*/
