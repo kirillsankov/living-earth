@@ -37,5 +37,6 @@
   content: "\e903";
 }
 .icon-header-login:before {
+  display: none;
   content: "\e904";
 }

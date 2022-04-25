@@ -1154,10 +1154,48 @@ body.lock {
 }
 
 /*=============================================*/
+.contacts {
+  position: relative;
+  padding: 0 0 60px 0;
+}
+.contacts::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  top: -230px;
+  right: 0;
+  width: 245px;
+  height: 410px;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
 .contacts__decoration {
   position: absolute;
   background: url("../img/pentagon.png") no-repeat;
   background-size: 100% auto;
+}
+.contacts__decoration_one {
+  width: 298px;
+  height: 255px;
+  left: -230px;
+  top: -70px;
+}
+.contacts__decoration_two {
+  width: 188px;
+  height: 162px;
+  left: -147px;
+  top: 196px;
+}
+.contacts__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+.contacts__img_one {
+  width: 34%;
 }
 .contacts__title {
   font-size: 24px;
@@ -1216,12 +1254,13 @@ body.lock {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translate(-65px, 7px);
+  transform: translate(-42px, 7px);
+  margin-right: 65px;
 }
 .contacts__right {
   max-width: 345px;
   flex-grow: 1;
-  transform: translateX(104px);
+  transform: translateX(61px);
 }
 .contacts__info {
   margin: 0 0 19px 35px;
@@ -1310,6 +1349,9 @@ body.lock {
     transform: translate(205px, -72%);
   }
 
+  .cooperation {
+    padding-bottom: 90px;
+  }
   .cooperation .container {
     flex-direction: column;
     align-items: center;
@@ -1317,6 +1359,10 @@ body.lock {
   .cooperation__wrapper {
     padding: 0;
     margin: 0 0 100px 0;
+  }
+
+  .contacts__right, .contacts__left {
+    transform: translate(0);
   }
 }
 @media (max-width: 980px) {
@@ -1484,11 +1530,31 @@ body.lock {
     margin-bottom: 60px;
   }
 
+  .cooperation {
+    padding-bottom: 80px;
+  }
   .cooperation__title {
     margin-bottom: 45px;
   }
   .cooperation__description {
     margin-bottom: 43px;
+  }
+
+  .contacts__title {
+    margin-bottom: 44px;
+  }
+  .contacts__decoration {
+    display: none;
+  }
+  .contacts__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts__left {
+    margin: 0 0 30px 0;
+  }
+  .contacts__description {
+    margin-bottom: 34px;
   }
 }
 @media (max-width: 840px) {
@@ -1824,6 +1890,9 @@ body.lock {
     resize: none;
   }
 
+  .cooperation {
+    padding-bottom: 55px;
+  }
   .cooperation__right {
     width: 455px;
     height: 430px;
@@ -1836,6 +1905,16 @@ body.lock {
   }
   .cooperation__description {
     margin-bottom: 33px;
+  }
+
+  .contacts {
+    overflow: hidden;
+  }
+  .contacts::before {
+    display: none;
+  }
+  .contacts__title {
+    margin-bottom: 34px;
   }
 }
 @media (max-width: 540px) {
@@ -2075,6 +2154,9 @@ body.lock {
     padding: 0 0 17px 0;
   }
 
+  .cooperation {
+    padding-bottom: 33px;
+  }
   .cooperation__title {
     margin-bottom: 20px;
   }
@@ -2097,6 +2179,33 @@ body.lock {
     width: 61.2%;
     left: 108px;
     top: -39px;
+  }
+
+  .contacts__title {
+    margin-bottom: 19px;
+  }
+  .contacts__left {
+    width: 404px;
+    margin: 0 0 -5px 0;
+  }
+  .contacts__description {
+    width: max-content;
+    margin-bottom: 29px;
+  }
+  .contacts__info {
+    position: relative;
+    margin: 0 0 80px 32px;
+  }
+  .contacts__info::before {
+    content: "";
+    position: absolute;
+    bottom: -58px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+    background: url(../img/logo.svg) no-repeat;
+    background-size: 100% auto;
   }
 }
 
