@@ -1225,9 +1225,6 @@ body.lock{
       position: absolute;
       left: -31px;
       font-size: 16px;
-      background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
   &__address{
@@ -1281,6 +1278,71 @@ body.lock{
 }
 
 /*=============================================*/
+
+.footer{
+  background-color: black;
+  &__wrapper{
+    max-width: $widthContainer;
+    margin: 0 auto;
+    background: black url("../img/footer/footer-background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__partner{
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    column-gap: 15px;
+    margin: 55px 0 0 0;
+  }
+  &__middle{
+    text-transform: uppercase;
+  }
+  &__logo{
+    width: 105px;
+    height: 105px;
+    margin-bottom: 12px;
+  }
+  &__nav{
+    flex-direction: column;
+    column-gap: 91px;
+    max-height: 130px;
+    margin: 38px 0 0 0;
+  }
+  &__link{
+    padding: 0 0 17px 0;
+  }
+  &__button{
+    margin-top: 6px;
+    width: 158px;
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 0 60px 0;
+
+  }
+  &__social{
+    width: 122px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__navigation{
+    margin-right: 273px;
+  }
+}
+
+.social{
+  &__vk{
+    font-size: 20px;
+  }
+  &__inst{
+    font-size: 26px;
+  }
+}
+
+/*=============================================*/
 @media (max-width: 1200px) {
   .company{
     justify-content: space-around;
@@ -1289,7 +1351,7 @@ body.lock{
     }
   }
 }
- @media (max-width: 1120px){
+@media (max-width: 1120px){
    .header{
    &__log-in{
      max-width: none;

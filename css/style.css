@@ -1213,9 +1213,6 @@ body.lock {
   position: absolute;
   left: -31px;
   font-size: 16px;
-  background: linear-gradient(90deg, #C1AD64 1.88%, #A98343 35.61%, #A27C3D 54.52%, #C4B067 87.74%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .contacts__address {
   position: relative;
@@ -1264,6 +1261,67 @@ body.lock {
 }
 .contacts__info {
   margin: 0 0 19px 35px;
+}
+
+/*=============================================*/
+.footer {
+  background-color: black;
+}
+.footer__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: black url("../img/footer/footer-background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer__partner {
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  column-gap: 15px;
+  margin: 55px 0 0 0;
+}
+.footer__middle {
+  text-transform: uppercase;
+}
+.footer__logo {
+  width: 105px;
+  height: 105px;
+  margin-bottom: 12px;
+}
+.footer__nav {
+  flex-direction: column;
+  column-gap: 91px;
+  max-height: 130px;
+  margin: 38px 0 0 0;
+}
+.footer__link {
+  padding: 0 0 17px 0;
+}
+.footer__button {
+  margin-top: 6px;
+  width: 158px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0 60px 0;
+}
+.footer__social {
+  width: 122px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer__navigation {
+  margin-right: 273px;
+}
+
+.social__vk {
+  font-size: 20px;
+}
+.social__inst {
+  font-size: 26px;
 }
 
 /*=============================================*/
