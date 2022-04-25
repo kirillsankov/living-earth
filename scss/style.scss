@@ -1284,9 +1284,8 @@ body.lock{
   &__wrapper{
     max-width: $widthContainer;
     margin: 0 auto;
-    background: black url("../img/footer/footer-background.png") no-repeat;
+    background: black url("../img/footer/footer-background.png") center no-repeat;
     background-size: cover;
-    background-position: center;
   }
   &__partner{
     display: flex;

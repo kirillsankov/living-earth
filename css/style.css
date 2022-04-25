@@ -1270,9 +1270,8 @@ body.lock {
 .footer__wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  background: black url("../img/footer/footer-background.png") no-repeat;
+  background: black url("../img/footer/footer-background.png") center no-repeat;
   background-size: cover;
-  background-position: center;
 }
 .footer__partner {
   display: flex;
