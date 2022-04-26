@@ -88,6 +88,23 @@ body.lock {
   width: 100%;
 }
 
+.blur-side::after, .blur-side::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #131418;
+  filter: blur(8px);
+}
+.blur-side::after {
+  transform: translateX(calc(720px - 50%));
+}
+.blur-side::before {
+  transform: translateX(calc(-720px - 50%));
+}
+
 /*=============================================*/
 .site {
   height: 100%;
@@ -179,6 +196,8 @@ body.lock {
 /*=============================================*/
 .introductory {
   background-color: #131418;
+  position: relative;
+  overflow: hidden;
 }
 .introductory__container {
   max-width: 1440px;
@@ -1265,13 +1284,18 @@ body.lock {
 
 /*=============================================*/
 .footer {
-  background-color: black;
+  background-color: #050505;
 }
 .footer__wrapper {
+  overflow: hidden;
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   background: black url("../img/footer/footer-background.png") center no-repeat;
   background-size: cover;
+}
+.footer__wrapper::after, .footer__wrapper::before {
+  background-color: #050505;
 }
 .footer__middle {
   text-transform: uppercase;
@@ -1335,6 +1359,16 @@ body.lock {
 }
 
 /*=============================================*/
+@media (min-width: 2100px) {
+  .products__rectangle-right {
+    width: 52.7%;
+  }
+}
+@media (min-width: 4100px) {
+  .products__rectangle-right {
+    width: 51.4%;
+  }
+}
 @media (max-width: 1200px) {
   .company {
     justify-content: space-around;
