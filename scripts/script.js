@@ -1,4 +1,5 @@
 "use strict"
+
 const iconMenu = document.querySelector('.nav__icon-burger');
 const introductoryBottles = document.querySelectorAll('.introductory__bottle');
 const buttonsAdvantages = document.querySelectorAll(".block__button");
@@ -11,6 +12,7 @@ let buttonArrayHidden = [];
 let fClick;
 let isOne = false;
 let isHidden = true;
+let widthWindow = window.innerWidth;
 
 const sliderDocumentContainer = document.querySelector('.slider-documents__container');
 const sliderDocumentTracer = document.querySelector('.slider-documents__tracer');
@@ -29,19 +31,22 @@ showFertilizerItem();
 showHoneyText();
 
 window.addEventListener('resize', () => {
-    if (document.body.offsetWidth <= 1030 && !isOne) {
-        addClassHidden();
-        updateClassHiddenThree();
-        isOne = true;
-    } else if (document.body.offsetWidth > 1030 && isOne) {
-        removeClassHidden();
-        updateClassHiddenThree();
-        isOne = false;
-    }
-    if(!isHidden) {
-        isHidden = true;
-        hiddenBlock();
-        resetButtonText();
+    if(widthWindow !== window.innerWidth) {
+        if (document.body.offsetWidth <= 1030 && !isOne) {
+            addClassHidden();
+            updateClassHiddenThree();
+            isOne = true;
+        } else if (document.body.offsetWidth > 1030 && isOne) {
+            removeClassHidden();
+            updateClassHiddenThree();
+            isOne = false;
+        }
+        if(!isHidden) {
+            isHidden = true;
+            hiddenBlock();
+            resetButtonText();
+        }
+        widthWindow = window.innerWidth;
     }
 }, false)
 
