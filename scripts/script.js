@@ -1,6 +1,9 @@
 "use strict"
 
 const iconMenu = document.querySelector('.nav__icon-burger');
+const bodyMenu = document.querySelector('.nav__body');
+const textMenu = document.querySelector('.nav__text');
+
 const introductoryBottles = document.querySelectorAll('.introductory__bottle');
 const buttonsAdvantages = document.querySelectorAll(".block__button");
 const fertilizerEffectivenessItem = document.querySelectorAll('.fertilizer__effectiveness-item');
@@ -19,6 +22,8 @@ const sliderDocumentTracer = document.querySelector('.slider-documents__tracer')
 const buttonLeft = document.querySelector('.slider-documents__button_left');
 const buttonRight = document.querySelector('.slider-documents__button_right');
 
+const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
+
 
 addClassHidden();
 updateClassHidden();
@@ -29,6 +34,8 @@ Menu();
 animationBottles();
 showFertilizerItem();
 showHoneyText();
+
+menuLinkScroll();
 
 window.addEventListener('resize', () => {
     if(widthWindow !== window.innerWidth) {
@@ -176,15 +183,16 @@ function clickButtonLeft(){
 
 function Menu(){
     if (iconMenu) {
-        const bodyMenu = document.querySelector('.nav__body');
-        const textMenu = document.querySelector('.nav__text');
         iconMenu.addEventListener('click', () => {
-            document.body.classList.toggle('lock');
-            iconMenu.classList.toggle('nav__icon_active');
-            bodyMenu.classList.toggle('nav__body_active');
-            textMenu.classList.toggle('text-hidden');
+            openAndCloseMenu();
         })
     }
+}
+function openAndCloseMenu(){
+    document.body.classList.toggle('lock');
+    iconMenu.classList.toggle('nav__icon_active');
+    bodyMenu.classList.toggle('nav__body_active');
+    textMenu.classList.toggle('text-hidden');
 }
 function animationBottles(){
     if (introductoryBottles.length !== 0) {
@@ -227,6 +235,30 @@ function showHoneyText(){
 function toggleNameButton(btnElementText){
     (btnElementText.textContent === "Свернуть") ? btnElementText.textContent = "Ещё" :
         btnElementText.textContent = "Свернуть";
+}
+
+function menuLinkScroll(){
+    if(menuLinks.length !== 0) {
+        menuLinks.forEach(el => {
+            el.addEventListener('click',  onMenuLinkClick)
+        })
+    }
+}
+function onMenuLinkClick(e){
+    const menuLink = e.target;
+    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+        if(iconMenu.classList.contains('nav__icon_active')){
+            openAndCloseMenu();
+        }
+        const gotoBlock = document.querySelector(menuLink.dataset.goto);
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY
+            - document.querySelector('.header').offsetHeight;
+        window.scrollTo({
+            top: gotoBlockValue,
+            behavior: 'smooth',
+        });
+    }
+    e.preventDefault();
 }
 
 $(document).ready(function (){
