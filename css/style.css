@@ -1683,6 +1683,9 @@ body.lock {
     color: white;
   }
 
+  .header {
+    padding-bottom: 12px;
+  }
   .header__wrapper {
     position: relative;
   }
