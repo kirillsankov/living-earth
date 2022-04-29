@@ -24,6 +24,13 @@ const buttonRight = document.querySelector('.slider-documents__button_right');
 
 const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
 
+const loginButton = document.querySelector('.login-button');
+const popup = document.querySelector('.popup');
+const mainContainer = document.querySelector('.main');
+const header = document.querySelector('.header');
+const btnClose = document.querySelector('.popup__btn-close');
+const timeOut = 800;
+
 
 addClassHidden();
 updateClassHidden();
@@ -59,6 +66,15 @@ window.addEventListener('resize', () => {
 
 buttonLeft.addEventListener('click' , clickButtonLeft);
 buttonRight.addEventListener('click' , clickButtonRight);
+
+loginButton.addEventListener('click', openPopup);
+popup.addEventListener('click', (e) => {
+    if(e.target.classList.contains("popup")) {
+        closePopup(e);
+    }
+});
+
+btnClose.addEventListener('click', closePopup);
 
 function isLess1200px(){
     if (document.body.offsetWidth <= 1030) {
@@ -260,6 +276,24 @@ function onMenuLinkClick(e){
     }
     e.preventDefault();
 }
+
+function openPopup(){
+    let widthAll = mainContainer.offsetWidth;
+    document.body.classList.add('lock');
+    let scrollWidth = mainContainer.offsetWidth - widthAll;
+    mainContainer.style.paddingRight = scrollWidth + 'px';
+    header.style.paddingRight = scrollWidth + 'px';
+    popup.classList.remove('popup_hidden');
+}
+function closePopup(){
+    popup.classList.add('popup_hidden');
+    setTimeout(()=>{
+        document.body.classList.remove('lock');
+        mainContainer.style.paddingRight = 0 + 'px';
+        header.style.paddingRight = 0 + 'px';
+    }, timeOut);
+}
+
 
 $(document).ready(function (){
     $('.slider-news').slick({

@@ -35,7 +35,7 @@
                     </div>
                 </nav>
                 <div class="header__log-in">
-                    <button class="button adaptive-text icon-header-login">ВХОД</button>
+                    <button class="login-button button adaptive-text icon-header-login">ВХОД</button>
                 </div>
             </div>
         </div>
@@ -1037,6 +1037,44 @@
             </div>
         </section>
         <div class="rectangle"></div>
+        <div class="popup popup_hidden">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <div class="popup__title">
+                        <h2 class="title">ВХОД В ВАШ КАБИНЕТ</h2>
+                    </div>
+                    <div class="popup__description"><p class="text">Войдите в свой аккаунт</p></div>
+                    <form class="popup__form form" action="" method="post">
+                        <div class="form__item">
+                            <label class="form__text" for="popup-login-email">E-mail</label>
+                            <input class="form__input text" type="email" name="" id="popup-login-email" required placeholder="user@gmail.com">
+                        </div>
+                        <div class="form__item popup__item">
+                            <label class="form__text" for="popup-login-password">Пароль</label>
+                            <input class="form__input text" type="password" name="" id="popup-login-password">
+                        </div>
+                        <div class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="" id="popup-login-checkbox">
+                            <label class="form__checkbox-wrapper" for="popup-login-checkbox"></label>
+                            <span class="form__span">Запомнить меня</span>
+                        </div>
+                        <div class="form__button">
+                            <button class="button" type="submit">ВОЙТИ</button>
+                        </div>
+                    </form>
+                    <a class="popup__text-gold" href="#">Забыли пароль?</a>
+                    <div class="popup__register">
+                        <p class="popup__text">Нет аккаунта?</p>
+                        <a href="#" class="popup__text-gold">Зарегистрируйтесь</a>
+                    </div>
+                    <div class="popup__pentagon"></div>
+                    <div class="popup__pentagon-logo">
+                        <img class="popup__img" src="./img/logo.svg" alt="logo">
+                    </div>
+                    <div class="popup__btn-close"></div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__wrapper blur-side">
