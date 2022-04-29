@@ -1162,6 +1162,38 @@ body.lock {
 .form__textarea {
   min-height: 83px;
 }
+.form__checkbox {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.form__checkbox:checked + .form__checkbox-wrapper:before {
+  content: "";
+  width: 9px;
+  height: 5px;
+  border: 2px solid gold;
+  border-right: none;
+  border-top: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-44%, -80%) rotate(-45deg);
+}
+.form__checkbox-wrapper {
+  display: block;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border: 1px solid gold;
+  border-image-source: linear-gradient(90deg, rgba(255, 234, 71, 0.5) 0%, rgba(147, 134, 34, 0.5) 31.25%, rgba(243, 216, 0, 0.5) 68.23%, rgba(255, 234, 71, 0.5) 100%);
+  border-image-slice: 1;
+  float: left;
+}
+.form__span {
+  font-size: 12px;
+  color: #868686;
+  margin-left: 2px;
+}
 .form__text {
   display: block;
   position: absolute;
@@ -1170,6 +1202,18 @@ body.lock {
   padding: 0 10px;
   background-color: #191919;
   z-index: 2;
+}
+.form__item {
+  position: relative;
+  margin-bottom: 35px;
+}
+.form__checkbox {
+  align-self: flex-start;
+}
+.form__button {
+  align-self: center;
+  max-width: 158px;
+  width: 100%;
 }
 
 /*=============================================*/
@@ -1359,6 +1403,120 @@ body.lock {
 }
 
 /*=============================================*/
+.popup {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.8s ease;
+}
+.popup_hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.popup__title {
+  font-size: 24px;
+  margin: 80px 0 36px 0;
+}
+.popup__description {
+  margin: 0 0 39px 0;
+}
+.popup__body {
+  position: absolute;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 0 110px 0;
+  background: #191919;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.popup__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup__form {
+  max-width: 342px;
+  width: 100%;
+  margin-bottom: 13px;
+}
+.popup__register {
+  margin-top: 21px;
+}
+.popup__item {
+  margin-bottom: 21px;
+}
+.popup__text {
+  display: inline-block;
+  color: #868686;
+  font-size: 12px;
+  line-height: 16.61px;
+}
+.popup__text-gold {
+  display: inline-block;
+  font-size: 12px;
+  color: #B0A33D;
+  line-height: 16.61px;
+  text-decoration: underline;
+}
+.popup__pentagon, .popup__pentagon-logo {
+  position: absolute;
+  background-image: url("../img/pentagon.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index: -1;
+}
+.popup__img {
+  width: 105px;
+  opacity: 0.3;
+}
+.popup__pentagon {
+  width: 458px;
+  height: 500px;
+  right: -93px;
+  top: -98px;
+}
+.popup__pentagon-logo {
+  width: 298px;
+  height: 260px;
+  right: 138px;
+  top: 181px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__btn-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+.popup__btn-close::after, .popup__btn-close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 3px;
+  background-color: gold;
+}
+.popup__btn-close::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popup__btn-close::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*=============================================*/
 @media (min-width: 2100px) {
   .products__rectangle-right {
     width: 52.7%;
@@ -1367,6 +1525,11 @@ body.lock {
 @media (min-width: 4100px) {
   .products__rectangle-right {
     width: 51.4%;
+  }
+}
+@media (max-width: 1440px) {
+  .popup__body {
+    max-width: calc(100% - 200px);
   }
 }
 @media (max-width: 1200px) {
@@ -2072,6 +2235,21 @@ body.lock {
   .copyright__text:last-child {
     margin-bottom: 0;
   }
+
+  .popup__body {
+    max-width: calc(100% - 100px);
+    top: 50px;
+    padding: 0 0 80px 0;
+  }
+  .popup__description {
+    margin: 0 0 29px 0;
+  }
+  .popup__title {
+    margin: 60px 0 26px 0;
+  }
+  .popup__pentagon, .popup__pentagon-logo {
+    display: none;
+  }
 }
 @media (max-width: 540px) {
   .introductory__container {
@@ -2380,6 +2558,21 @@ body.lock {
 
   .copyright__text {
     width: max-content;
+  }
+
+  .popup__body {
+    max-width: calc(100% - 50px);
+    padding: 0 0 20px 0;
+  }
+  .popup__description {
+    margin: 0 0 23px 0;
+  }
+  .popup__content {
+    padding: 0 20px;
+  }
+  .popup__title {
+    max-width: 250px;
+    margin: 20px 0 16px 0;
   }
 }
 
