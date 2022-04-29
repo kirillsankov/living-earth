@@ -29,6 +29,7 @@ const registerButton = document.querySelector('.register-button');
 const popups = document.querySelectorAll('.popup');
 const mainContainer = document.querySelector('.main');
 const header = document.querySelector('.header');
+const footer = document.querySelector('.footer');
 const btnsClose = document.querySelectorAll('.popup__btn-close');
 const timeOut = 800;
 
@@ -72,15 +73,19 @@ loginButton.addEventListener('click', () =>{
     openPopup(document.querySelector('.popup-login'));
 } );
 
-registerButton.addEventListener('click', () =>{
-    openPopup(document.querySelector('.popup-register'));
+registerButton.addEventListener('click', (e) =>{
+    for(let popup of popups){
+        closePopup(popup);
+    }
+    setTimeout( () =>{
+        openPopup(document.querySelector('.popup-register'));
+    },timeOut)
+    e.preventDefault();
 } );
 popups.forEach((el)=>{
     el.addEventListener('click', (e) => {
         if(e.target.classList.contains("popup")) {
-            for(let popup of popups){
-                closePopup(popup);
-            }
+            closePopup(e.target);
         }
     });
 })
@@ -300,6 +305,7 @@ function openPopup(popup){
         let scrollWidth = mainContainer.offsetWidth - widthAll;
         mainContainer.style.paddingRight = scrollWidth + 'px';
         header.style.paddingRight = scrollWidth + 'px';
+        footer.style.paddingRight = scrollWidth + 'px';
     }
     popup.classList.remove('popup_hidden');
 }
@@ -310,6 +316,7 @@ function closePopup(popup){
             document.body.classList.remove('lock');
             mainContainer.style.paddingRight = 0 + 'px';
             header.style.paddingRight = 0 + 'px';
+            footer.style.paddingRight = 0 + 'px';
         }, timeOut);
     }
 }
