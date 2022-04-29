@@ -1037,21 +1037,21 @@
             </div>
         </section>
         <div class="rectangle"></div>
-        <div class="popup popup_hidden">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <div class="popup__title">
+        <div class="popup popup-login popup_hidden">
+            <div class="popup__body popup-login__body">
+                <div class="popup__content popup-login__content">
+                    <div class="popup__title  popup-login__title">
                         <h2 class="title">ВХОД В ВАШ КАБИНЕТ</h2>
                     </div>
-                    <div class="popup__description"><p class="text">Войдите в свой аккаунт</p></div>
-                    <form class="popup__form form" action="" method="post">
+                    <div class="popup__description popup-login__description"><p class="text">Войдите в свой аккаунт</p></div>
+                    <form class="popup__form popup-login__form form " action="" method="post">
                         <div class="form__item">
                             <label class="form__text" for="popup-login-email">E-mail</label>
-                            <input class="form__input text" type="email" name="" id="popup-login-email" required placeholder="user@gmail.com">
+                            <input class="form__input text" type="email" name="" id="popup-login-email" required >
                         </div>
                         <div class="form__item popup__item">
                             <label class="form__text" for="popup-login-password">Пароль</label>
-                            <input class="form__input text" type="password" name="" id="popup-login-password">
+                            <input class="form__input text" type="password" name="" id="popup-login-password" required>
                         </div>
                         <div class="form__item">
                             <input class="form__checkbox" type="checkbox" name="" id="popup-login-checkbox">
@@ -1063,10 +1063,57 @@
                         </div>
                     </form>
                     <a class="popup__text-gold" href="#">Забыли пароль?</a>
-                    <div class="popup__register">
+                    <div class="popup__register popup-login__register">
                         <p class="popup__text">Нет аккаунта?</p>
-                        <a href="#" class="popup__text-gold">Зарегистрируйтесь</a>
+                        <a href="#" class="popup__text-gold register-button">Зарегистрируйтесь</a>
                     </div>
+                    <div class="popup__pentagon"></div>
+                    <div class="popup__pentagon-logo">
+                        <img class="popup__img" src="./img/logo.svg" alt="logo">
+                    </div>
+                    <div class="popup__btn-close"></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-register popup_hidden">
+            <div class="popup__body popup-register__body">
+                <div class="popup__content">
+                    <div class="popup__title popup-register__title">
+                        <h2 class="title">РЕГИСТРАЦИЯ</h2>
+                    </div>
+                    <div class="popup__description popup-register__description">
+                        <p class="text">
+                            Пройдите регистрацию, чтобы стать партнером компании
+                        </p>
+                        <p class="text">
+                            Ваш спонсор Олег Грегор
+                        </p>
+                    </div>
+                    <form class="popup__form form" action="" method="post">
+                        <div class="form__item">
+                            <label class="form__text" for="popup-register-fio">ФИО</label>
+                            <input class="form__input text" type="text" name="" id="popup-register-fio" required>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__text" for="popup-register-phone">Телефон</label>
+                            <input class="form__input text" type="tel" name="" id="popup-register-phone" required>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__text" for="popup-register-email">E-mail</label>
+                            <input class="form__input text" type="email" name="" id="popup-register-email" required>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__text" for="popup-register-password">E-mail</label>
+                            <input class="form__input text" type="password" name="" id="popup-register-password" required>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__text" for="popup-register-password-repeat">Повторите пароль</label>
+                            <input class="form__input text" type="password" name="" id="popup-register-password-repeat" required>
+                        </div>
+                        <div class="form__button">
+                            <button class="button" type="submit">Далее</button>
+                        </div>
+                    </form>
                     <div class="popup__pentagon"></div>
                     <div class="popup__pentagon-logo">
                         <img class="popup__img" src="./img/logo.svg" alt="logo">
