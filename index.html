@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -79,7 +79,7 @@
             <div class="container">
                 <div class="company">
                     <div class="company__title">
-                        <p class="title">О КОМПАНИИ</p>
+                        <h2 class="title">О КОМПАНИИ</h2>
                     </div>
                     <div class="company__container">
                         <div class="company__picture-container">
@@ -177,9 +177,9 @@
         <section class="products">
             <div class="container">
                 <div class="products__title">
-                    <p class="title">
+                    <h2 class="title">
                         ПРОДУКЦИЯ
-                    </p>
+                    </h2>
                 </div>
                 <div class="description">
                     <div class="description__common-words">
@@ -791,7 +791,7 @@
         <section class="documents">
             <div class="container">
                 <div class="documents__title">
-                    <p class="title">ДОКУМЕНТЫ</p>
+                    <h2 class="title">ДОКУМЕНТЫ</h2>
                 </div>
                 <div class="documents__slider">
                     <div class="slider-documents__container">
@@ -860,7 +860,7 @@
         <section class="news">
             <div class="container">
                 <div class="news__title">
-                    <p class="title">НОВОСТИ</p>
+                    <h2 class="title">НОВОСТИ</h2>
                 </div>
                 <div class="news__slider">
                     <div class="slider-news">
@@ -938,9 +938,9 @@
         </section>
         <section class="cooperation">
             <div class="cooperation__title">
-                <p class="title">
+                <h2 class="title">
                     СОТРУДНИЧЕСТВО
-                </p>
+                </h2>
             </div>
             <div class="container">
                 <div class="cooperation__wrapper">
@@ -950,22 +950,22 @@
                             Оставьте Ваше предложение в&#160;форме&#160;ниже
                         </p>
                     </div>
-                    <form class="form" action="" method="post">
+                    <form class="form" action="#" method="post">
                         <div class="cooperation__item">
                             <label class="form__text" for="name">Имя</label>
-                            <input class="form__input text" type="text" name="" id="name" placeholder="Ban">
+                            <input class="form__input text" type="text" name="cooperation-name" id="name" placeholder="Ban">
                         </div>
                         <div class="cooperation__item cooperation__item_margin-big">
                             <label class="form__text" for="email">E-mail</label>
-                            <input class="form__input text" type="email" name="" id="email" required placeholder="user@gmail.com">
+                            <input class="form__input text" type="email" name="cooperation-email" id="email" required placeholder="user@gmail.com">
                         </div>
                         <div class="cooperation__item cooperation__item_margin-big">
                             <label class="form__text" for="phone">Телефон</label>
-                            <input class="form__input text" type="tel" name="" id="phone" required placeholder="+7(xxx)-xxx-xx-xx">
+                            <input class="form__input text" type="tel" name="cooperation-phone" id="phone" required placeholder="+7(xxx)-xxx-xx-xx">
                         </div>
                         <div class="cooperation__item">
                             <label class="form__text" for="info">Ваше предложение</label>
-                            <textarea class="form__textarea text" name="" id="info" required placeholder="Сообщение"></textarea>
+                            <textarea class="form__textarea text" name="cooperation-info" id="info" required placeholder="Сообщение"></textarea>
                         </div>
                         <div class="cooperation__button">
                             <button class="button" type="submit">Отправить</button>
@@ -985,7 +985,7 @@
         <section class="contacts">
             <div class="container">
                 <div class="contacts__title">
-                    <p class="title">КОНТАКТЫ</p>
+                    <h2 class="title">КОНТАКТЫ</h2>
                 </div>
                 <div class="contacts__container">
                     <div class="contacts__left">
@@ -1015,18 +1015,18 @@
                             <p class="text">Остались вопросы? <br>
                                 Заполните формы и мы свяжемся с Вами!</p>
                         </div>
-                        <form class="form" action="" method="post">
+                        <form class="form" action="#" method="post">
                             <div class="contacts__item">
                                 <label class="form__text" for="contacts-name">Имя</label>
-                                <input class="form__input text" type="text" name="" id="contacts-name" placeholder="Ban">
+                                <input class="form__input text" type="text" name="contacts-name" id="contacts-name" placeholder="Ban">
                             </div>
                             <div class="contacts__item">
                                 <label class="form__text" for="contacts-email">E-mail</label>
-                                <input class="form__input text" type="email" name="" id="contacts-email" required placeholder="user@gmail.com">
+                                <input class="form__input text" type="email" name="contacts-email" id="contacts-email" required placeholder="user@gmail.com">
                             </div>
                             <div class="contacts__item contacts__item_big">
                                 <label class="form__text" for="contacts-info">Ваш вопрос</label>
-                                <textarea class="form__textarea text" name="" id="contacts-info" required placeholder="Сообщение"></textarea>
+                                <textarea class="form__textarea text" name="contacts-info" id="contacts-info" required placeholder="Сообщение"></textarea>
                             </div>
                             <div class="cooperation__button">
                                 <button class="button" type="submit">Отправить</button>
@@ -1044,17 +1044,17 @@
                         <h2 class="title">ВХОД В ВАШ КАБИНЕТ</h2>
                     </div>
                     <div class="popup__description popup-login__description"><p class="text">Войдите в свой аккаунт</p></div>
-                    <form class="popup__form popup-login__form form " action="" method="post">
+                    <form class="popup__form popup-login__form form " action="#" method="post">
                         <div class="form__item">
                             <label class="form__text" for="popup-login-email">E-mail</label>
-                            <input class="form__input text" type="email" name="" id="popup-login-email" required >
+                            <input class="form__input text" type="email" name="login-email" id="popup-login-email" required >
                         </div>
                         <div class="form__item popup__item">
                             <label class="form__text" for="popup-login-password">Пароль</label>
-                            <input class="form__input text" type="password" name="" id="popup-login-password" required>
+                            <input class="form__input text" type="password" name="login-password" id="popup-login-password" required>
                         </div>
                         <div class="form__item">
-                            <input class="form__checkbox" type="checkbox" name="" id="popup-login-checkbox">
+                            <input class="form__checkbox" type="checkbox" name="login-checkbox" id="popup-login-checkbox">
                             <label class="form__checkbox-wrapper" for="popup-login-checkbox"></label>
                             <span class="form__span">Запомнить меня</span>
                         </div>
@@ -1089,26 +1089,26 @@
                             Ваш спонсор Олег Грегор
                         </p>
                     </div>
-                    <form class="popup__form form" action="" method="post">
+                    <form class="popup__form form" action="#" method="post">
                         <div class="form__item">
                             <label class="form__text" for="popup-register-fio">ФИО</label>
-                            <input class="form__input text" type="text" name="" id="popup-register-fio" required>
+                            <input class="form__input text" type="text" name="register-fio" id="popup-register-fio" required>
                         </div>
                         <div class="form__item">
                             <label class="form__text" for="popup-register-phone">Телефон</label>
-                            <input class="form__input text" type="tel" name="" id="popup-register-phone" required>
+                            <input class="form__input text" type="tel" name="register-phone" id="popup-register-phone" required>
                         </div>
                         <div class="form__item">
                             <label class="form__text" for="popup-register-email">E-mail</label>
-                            <input class="form__input text" type="email" name="" id="popup-register-email" required>
+                            <input class="form__input text" type="email" name="register-email" id="popup-register-email" required>
                         </div>
                         <div class="form__item">
                             <label class="form__text" for="popup-register-password">E-mail</label>
-                            <input class="form__input text" type="password" name="" id="popup-register-password" required>
+                            <input class="form__input text" type="password" name="register-password" id="popup-register-password" required>
                         </div>
                         <div class="form__item">
                             <label class="form__text" for="popup-register-password-repeat">Повторите пароль</label>
-                            <input class="form__input text" type="password" name="" id="popup-register-password-repeat" required>
+                            <input class="form__input text" type="password" name="register-password-repeat" id="popup-register-password-repeat" required>
                         </div>
                         <div class="form__button">
                             <button class="button" type="submit">Далее</button>
